@@ -1,5 +1,6 @@
 package leetCode.repository;
 
+import java.util.Scanner;
 import java.util.Stack;
 
 /**
@@ -13,11 +14,14 @@ public class No84 {
      * 1.栈为空则入栈
      * 2.若h[i]>=栈顶元素,入栈
      * 3.若h[i]<栈顶元素,则开始出栈计算面积,并将最后出栈的h[x]值改为h[i]再重新入栈
+     *
      * @param heights 数组,本例会创建个新数组,在数组最后一个位置补个高度为0的图
      * @return 最大面积值
      */
     public int largestRectangleArea(int[] heights) {
+        //poj使用long计算结果
         int max = 0;
+        //poj使用jdk1.5,泛型使用略加注意
         Stack<Integer> s = new Stack<>();
         int[] h = new int[heights.length + 1];
         for (int i = 0; i < h.length; i++) {
@@ -48,6 +52,16 @@ public class No84 {
 
     public static void main(String[] args) {
         No84 n84 = new No84();
-        System.out.println(n84.largestRectangleArea(new int[]{1,2,3,2,1,5,6,2,3,2,2}));
+//        System.out.println(n84.largestRectangleArea(new int[]{1,2,3,2,1,5,6,2,3,2,2}));
+        // oj summit version
+        Scanner scan = new Scanner(System.in);
+        int n;
+        while ((n = scan.nextInt()) != 0) {
+            int[] array = new int[n];
+            for (int i = 0; i < n; i++) {
+                array[i] = scan.nextInt();
+            }
+            System.out.println(n84.largestRectangleArea(array));
+        }
     }
 }
