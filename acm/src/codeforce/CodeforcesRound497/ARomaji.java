@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ARomaji {
 
+    private static char[] vowel = new char[]{'a', 'i', 'u', 'e', 'o'};
+
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
@@ -21,23 +23,17 @@ public class ARomaji {
                     return false;
                 }
             }
-
         }
-
         return true;
     }
 
     public static boolean isVowel(char x) {
-        switch (x) {
-            case 'a':
-            case 'i':
-            case 'u':
-            case 'e':
-            case 'o':
+        for (int i = 0; i < vowel.length; i++) {
+            if (vowel[i] == x) {
                 return true;
-            default:
-                return false;
+            }
         }
+        return false;
     }
 
 }
