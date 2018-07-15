@@ -4,7 +4,7 @@ import java.util.Queue;
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class GameShopping {
+public class AGameShopping {
 
     public static void main(String[] args) throws InterruptedException {
         Scanner scan = new Scanner(System.in);

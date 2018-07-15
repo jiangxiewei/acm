@@ -1,10 +1,17 @@
 package codeforce.EducationalCodeforcesRound47;
 
+import java.util.Queue;
 import java.util.Scanner;
 import java.util.Stack;
+import java.util.concurrent.LinkedBlockingQueue;
 
-public class MinimumTernaryString {
+public class BMinimumTernaryString {
 
+    /**
+     * 越看越像智障,丢人代码
+     *
+     * @param s 输入
+     */
     public static void stackSimulation(String s) {
         Stack<Character> stack = new Stack<>();
         boolean twoFlag = false, xFlag = false;
@@ -64,9 +71,53 @@ public class MinimumTernaryString {
         System.out.println(new String(newChar));
     }
 
+    /**
+     * 2与2之后的0的相对位置是不变的,2之后的1会全部移到2前面.
+     *
+     * @param s 输入
+     */
+    public static void twoAsSpliter(String s) {
+        Stack<Character> stack = new Stack<>();
+        Queue<Character> q = new LinkedBlockingQueue<>();
+        char[] newChar = new char[s.length()];
+        int p = 0;
+        boolean afterTwoFlag = false;
+        for (int i = 0; i < s.length(); i++) {
+            char cur = s.charAt(i);
+            if (cur == '2') {
+                afterTwoFlag = true;
+                q.add(cur);
+            }
+            if (cur == '0') {
+                if (afterTwoFlag) {
+                    q.add(cur);
+                } else {
+                    stack.push(cur);
+                }
+            }
+            if (cur == '1') {
+                if (!stack.isEmpty() && stack.peek() < cur) {
+                    while (!stack.isEmpty() && stack.peek() == '0') {
+                        newChar[p++] = stack.pop();
+                    }
+
+                }
+                stack.push(cur);
+            }
+        }
+        while (!stack.isEmpty()) {
+            newChar[p++] = stack.pop();
+        }
+        while (!q.isEmpty()) {
+            newChar[p++] = q.poll();
+        }
+        System.out.println(new String(newChar));
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
-        stackSimulation(s);
+//        stackSimulation(s);
+        twoAsSpliter(s);
     }
 }
