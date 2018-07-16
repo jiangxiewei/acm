@@ -114,6 +114,11 @@ public class BMinimumTernaryString {
         System.out.println(new String(newChar));
     }
 
+    /**
+     * 实际上只用计数即可解决此题
+     *
+     * @param s 输入
+     */
     public static void countWay(String s) {
         int zeroBeforeTwo = 0;
         int oneNum = 0;
