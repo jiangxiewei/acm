@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * 输入n,m 以及m个 xi,di
  * avg(变换后)-avg(原来的) = Xi+Di*( (n*n+n)/2 + i*i - (n+1)*i )/n 故后半段括号内最小值为 (n+1)/2 , 最大值为1或n
- * 仅需根据Di正负形取值即可
+ * 仅需根据Di正负取值即可
  * 注意精度问题,n可最后再除
  */
 public class CAnnoyingPresent {

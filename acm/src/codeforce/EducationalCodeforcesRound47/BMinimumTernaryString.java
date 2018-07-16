@@ -114,10 +114,45 @@ public class BMinimumTernaryString {
         System.out.println(new String(newChar));
     }
 
+    public static void countWay(String s) {
+        int zeroBeforeTwo = 0;
+        int oneNum = 0;
+        boolean twoFlag = false;
+        Queue<Character> q = new LinkedBlockingQueue<>();
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            if (c == '1') {
+                oneNum++;
+                continue;
+            } else if (c == '2') {
+                twoFlag = true;
+            }
+            if (twoFlag) {
+                q.add(c);
+            } else if (c == '0') {
+                zeroBeforeTwo++;
+            }
+        }
+        //开始生成新字符
+        char[] newChar = new char[s.length()];
+        int p = 0;
+        for (int i = 0; i < zeroBeforeTwo; i++) {
+            newChar[p++] = '0';
+        }
+        for (int i = 0; i < oneNum; i++) {
+            newChar[p++] = '1';
+        }
+        while (!q.isEmpty()) {
+            newChar[p++] = q.poll();
+        }
+        System.out.println(new String(newChar));
+    }
+
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
 //        stackSimulation(s);
-        twoAsSpliter(s);
+//        twoAsSpliter(s);
+        countWay(s);
     }
 }
