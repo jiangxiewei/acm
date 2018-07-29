@@ -4,7 +4,8 @@ import java.util.*;
 
 /**
  * E.Military Problem
- * 构建了个树,然后对于每次询问居然真的每次都去对应的端点走了一次前序遍历.....即便加上了剪枝也依旧超时,标准的错误思路.
+ * 构建了个树,然后对于每次询问我居然真的每次都去对应的端点走了一次前序遍历.....
+ * 即便加上了统计进行剪枝也依旧超时,标准的错误思路.
  */
 public class EErrorCodeEMilitaryProblem {
 
@@ -35,7 +36,6 @@ public class EErrorCodeEMilitaryProblem {
 
         /**
          * 初始化,将树连通
-         * 复杂度理论上O(n)
          *
          * @param fatherArray 从2开始,fatherArray[i]对应军官i的上级
          */
@@ -63,7 +63,6 @@ public class EErrorCodeEMilitaryProblem {
 
         /**
          * 对每一个节点进行递归统计
-         * 遍历统计树,复杂度O(n)
          */
         public int countNode(Node nod) {
             int count = 1;
@@ -75,7 +74,7 @@ public class EErrorCodeEMilitaryProblem {
         }
 
         /**
-         * DFS 查找第k个遍历,对于每个提问(u,k)
+         * DFS 查找第k个遍历,对于每个提问(u,k),剪枝跳过所有统计数小于k-1的值.
          *
          * @return 查找到了则返回, 没查找到则返回null
          */
