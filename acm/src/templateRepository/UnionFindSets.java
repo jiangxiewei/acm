@@ -15,14 +15,16 @@ public class UnionFindSets {
      * 并查集实例
      */
     private int[] sets;
+    private int size;
 
     /**
      * 初始化并查集
      *
      * @param size 并查集大小
      */
-    UnionFindSets(int size) {
+    public UnionFindSets(int size) {
         sets = new int[size];
+        this.size = size;
         Arrays.setAll(sets, operand -> operand);
 //        System.out.println(Arrays.toString(sets));
     }
@@ -35,8 +37,10 @@ public class UnionFindSets {
      */
     public int find(int x) {
         if (sets[x] == x) {
+            //指向自己,说明没有父节点了,返回本身
             return x;
         } else {
+            //说明有父节点,递归查询下去直到找到根节点,并让所有节点指向根节点
             return sets[x] = find(sets[x]);
         }
     }
@@ -71,7 +75,7 @@ public class UnionFindSets {
     }
 
     /**
-     * 对所有元素执行一次find(x)操作,让素有元素的父节点都指向其根节点
+     * 对所有元素执行一次find(x)操作,让素有元素都指向其集合的根节点
      */
     public void findAll() {
         for (int i = 0; i < sets.length; i++) {
@@ -79,22 +83,15 @@ public class UnionFindSets {
         }
     }
 
+    public int getSize() {
+        return size;
+    }
+
     @Override
     public String toString() {
         return "UnionFindSets{" +
                 "sets=" + Arrays.toString(sets) +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        UnionFindSets set = new UnionFindSets(20);
-        set.union(1, 2);
-        set.union(2, 3);
-        set.union(0, 3);
-        System.out.println(set.checkIfTheSame(0, 1));
-        System.out.println(set.checkIfTheSame(2, 4));
-        set.findAll();
-        System.out.println(set);
     }
 
 }
