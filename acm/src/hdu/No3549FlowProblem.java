@@ -6,6 +6,9 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * 增广路模板题
+ * <p>
+ * 题目坑点: 题目虽然告诉你边数量会输入过量,但没有告知过量情况下该如何处理.此处处理方式: 输入重边相叠加
+ * <p>
  * 默认1为源点,N为汇点
  *
  * @author jxwww
@@ -32,7 +35,6 @@ public class No3549FlowProblem {
      */
     private Queue<Integer> que = new LinkedBlockingQueue<>();
 
-
     public static void main(String[] args) {
         new No3549FlowProblem().getInputAndResolve();
     }
@@ -46,20 +48,19 @@ public class No3549FlowProblem {
         int maxFlow = 0;
         int cur, flow = Integer.MAX_VALUE;
         while (bfsFindArgumentingPath()) {
-            System.out.println("找到增广路");
+//            System.out.println("找到增广路");
             //先查找到的增广路上的可改尽量
             cur = n;
             while (preVertex[cur] > 0) {
-                flow = Math.min(capMatrix[cur][cur], flow);
+//                System.out.println("增广路经:c[" + preVertex[cur] + "][" + cur + "]=" + capMatrix[preVertex[cur]][cur] + ",flow=" + flow);
+                flow = Math.min(capMatrix[preVertex[cur]][cur], flow);
                 cur = preVertex[cur];
-            }
-            if (flow < 0) {
-                throw new IllegalStateException("flow不可能为0");
             }
             //更新流
             cur = n;
             while (preVertex[cur] > 0) {
-                if (!updateFlow(preVertex[cur], cur, flow)) throw new IllegalStateException("更新失败");
+                updateFlow(preVertex[cur], cur, flow);
+                cur = preVertex[cur];
             }
             maxFlow += flow;
         }
@@ -91,8 +92,10 @@ public class No3549FlowProblem {
             for (int i = 1; i <= n; i++) {
                 //查找增广路,方便起见此处使用邻接矩阵.
                 if (preVertex[i] == 0 && capMatrix[cur][i] > 0) {
+//                    System.out.println("bfs--c[" + cur + "][" + i + "]=" + capMatrix[cur][i]);
                     //未被搜索过且残余容量不为空
                     preVertex[i] = cur;
+                    que.add(i);
                 }
             }
         }
@@ -105,28 +108,25 @@ public class No3549FlowProblem {
      * @param u    u
      * @param v    v
      * @param flow flow
-     * @return 更新成功与否(校验)
      */
-    public boolean updateFlow(int u, int v, int flow) {
-        if (flow <= 0) {
-            return false;
-        } else if (capMatrix[u][v] >= flow) {
+    public void updateFlow(int u, int v, int flow) {
+//        System.out.println(String.format("update u:%d v:%d flow:%d", u, v, flow));
+        if (capMatrix[u][v] >= flow && flow > 0) {
             capMatrix[u][v] -= flow;
             capMatrix[v][u] += flow;
         } else {
-            return false;
+            throw new IllegalArgumentException("redu[u][v]=" + capMatrix[u][v] + ",flow=" + flow);
         }
-        return true;
     }
 
     /**
-     * 提交OJ时的形式
+     * 提交hdu OJ时的形式
      */
     public void getInputAndResolve() {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt(), n, m, u, v, c;
         int[][] matrix;
-        while (t > 0) {
+        for (int seq = 1; seq <= t; seq++) {
             //获取点数量,边数量的输入值
             n = scan.nextInt() + 1;
             m = scan.nextInt();
@@ -137,15 +137,15 @@ public class No3549FlowProblem {
                 u = scan.nextInt();
                 v = scan.nextInt();
                 c = scan.nextInt();
-                matrix[u][v] = c;
+                //此题坑点,会重复输入相同边,且要求边值相加.
+                matrix[u][v] += c;
             }
             //将初始的容量矩阵信息存入此对象中
             this.n = n - 1;
             this.capMatrix = matrix;
             this.preVertex = new int[n];
             //执行对象的查找最大流方法并打印最大流结果
-            System.out.println(findMaxFlowWithEK());
-            t--;
+            System.out.println("Case " + seq + ": " + findMaxFlowWithEK());
         }
     }
 
