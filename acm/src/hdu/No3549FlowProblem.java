@@ -45,12 +45,23 @@ public class No3549FlowProblem {
     private int findMaxFlowWithEK() {
         int maxFlow = 0;
         int cur, flow = Integer.MAX_VALUE;
-        while (!bfsFindArgumentingPath()) {
+        while (bfsFindArgumentingPath()) {
+            System.out.println("找到增广路");
             //先查找到的增广路上的可改尽量
             cur = n;
-            while (preVertex[cur] != 0) {
+            while (preVertex[cur] > 0) {
+                flow = Math.min(capMatrix[cur][cur], flow);
                 cur = preVertex[cur];
             }
+            if (flow < 0) {
+                throw new IllegalStateException("flow不可能为0");
+            }
+            //更新流
+            cur = n;
+            while (preVertex[cur] > 0) {
+                if (!updateFlow(preVertex[cur], cur, flow)) throw new IllegalStateException("更新失败");
+            }
+            maxFlow += flow;
         }
         return maxFlow;
     }
@@ -66,6 +77,7 @@ public class No3549FlowProblem {
             preVertex[i] = 0;
         }
         que.add(1);
+        preVertex[1] = -1;
         Integer cur;
         while (!que.isEmpty()) {
             cur = que.poll();
@@ -77,8 +89,8 @@ public class No3549FlowProblem {
                 return true;
             }
             for (int i = 1; i <= n; i++) {
-                //查找路
-                if (preVertex[i] != 0 && capMatrix[cur][i] > 0) {
+                //查找增广路,方便起见此处使用邻接矩阵.
+                if (preVertex[i] == 0 && capMatrix[cur][i] > 0) {
                     //未被搜索过且残余容量不为空
                     preVertex[i] = cur;
                 }
@@ -88,13 +100,33 @@ public class No3549FlowProblem {
     }
 
     /**
+     * 更新流
+     *
+     * @param u    u
+     * @param v    v
+     * @param flow flow
+     * @return 更新成功与否(校验)
+     */
+    public boolean updateFlow(int u, int v, int flow) {
+        if (flow <= 0) {
+            return false;
+        } else if (capMatrix[u][v] >= flow) {
+            capMatrix[u][v] -= flow;
+            capMatrix[v][u] += flow;
+        } else {
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * 提交OJ时的形式
      */
     public void getInputAndResolve() {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt(), n, m, u, v, c;
         int[][] matrix;
-        while (t-- != 0) {
+        while (t > 0) {
             //获取点数量,边数量的输入值
             n = scan.nextInt() + 1;
             m = scan.nextInt();
@@ -113,6 +145,7 @@ public class No3549FlowProblem {
             this.preVertex = new int[n];
             //执行对象的查找最大流方法并打印最大流结果
             System.out.println(findMaxFlowWithEK());
+            t--;
         }
     }
 
