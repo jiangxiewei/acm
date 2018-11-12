@@ -21,7 +21,8 @@ public class No3549FlowProblem {
      */
     private int[][] capMatrix;
     /**
-     * 前置点
+     * ek中为: 前置点
+     * dinic中为: 层次标记
      */
     private int[] preVertex;
     /**
@@ -35,19 +36,49 @@ public class No3549FlowProblem {
      */
     private Queue<Integer> que = new LinkedBlockingQueue<>();
 
+    /**
+     * 入口
+     *
+     * @param args 无视
+     */
     public static void main(String[] args) {
         new No3549FlowProblem().getInputAndResolve();
     }
 
     /**
-     * 使用EK法,查找最大流查找网络流
+     * 使用Dinic法,查找最大流
+     *
+     * @return 最大流
+     */
+    private int findMaxFlowWithDinic() {
+        int maxFlow = 0;
+        while (bfsFindArgumentingPath(true)) {
+            maxFlow += dfsToArgumentPath();
+        }
+        return maxFlow;
+    }
+
+    /**
+     * dfs查找增广路并增广
+     *
+     * @return 可改进量
+     */
+    private int dfsToArgumentPath() {
+
+
+        return 0;
+    }
+
+    /**
+     * 使用EK法,查找最大流
      *
      * @return 最大流
      */
     private int findMaxFlowWithEK() {
         int maxFlow = 0;
         int cur, flow = Integer.MAX_VALUE;
-        while (bfsFindArgumentingPath()) {
+        //不断BFS搜索增广路,找到了对路增广
+        while (bfsFindArgumentingPath(false)) {
 //            System.out.println("找到增广路");
             //先查找到的增广路上的可改尽量
             cur = n;
@@ -68,33 +99,37 @@ public class No3549FlowProblem {
     }
 
     /**
-     * 使用BFS查找增广路
+     * 使用BFS查找增广路,也可用于dinic算法的分层
      *
+     * @param laminate 分层标记,为true时将只对图进行分层
      * @return 存在增广路则返回true
      */
-    private boolean bfsFindArgumentingPath() {
+    private boolean bfsFindArgumentingPath(boolean laminate) {
         //清空标记 与 前置顶点
         for (int i = 1; i <= n; i++) {
-            preVertex[i] = 0;
+            preVertex[i] = -1;
         }
         que.add(1);
-        preVertex[1] = -1;
+        preVertex[1] = 0;
         Integer cur;
         while (!que.isEmpty()) {
             cur = que.poll();
             if (cur == n) {
-                //到达终点,清空队列
-                while (!que.isEmpty()) {
-                    que.poll();
-                }
+                //到达终点
+                que.clear();
                 return true;
             }
             for (int i = 1; i <= n; i++) {
                 //查找增广路,方便起见此处使用邻接矩阵.
-                if (preVertex[i] == 0 && capMatrix[cur][i] > 0) {
+                if (preVertex[i] == -1 && capMatrix[cur][i] > 0) {
 //                    System.out.println("bfs--c[" + cur + "][" + i + "]=" + capMatrix[cur][i]);
                     //未被搜索过且残余容量不为空
-                    preVertex[i] = cur;
+                    if (laminate) {
+                        //对其分层
+                        preVertex[i] = preVertex[cur] + 1;
+                    } else {
+                        preVertex[i] = cur;
+                    }
                     que.add(i);
                 }
             }
