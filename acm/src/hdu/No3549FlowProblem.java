@@ -6,16 +6,16 @@ import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * 增广路模板题
- * <p>
  * 题目坑点: 题目虽然告诉你边数量会输入过量,但没有告知过量情况下该如何处理.此处处理方式: 输入重边相叠加
- * <p>
  * 默认1为源点,N为汇点
+ * 特别说明:hdu提交时,需要将类名改为Main 既 public class Main{}
  *
  * @author jxwww
  * @date 2018/11/11
  */
 public class No3549FlowProblem {
 
+    private static final Integer S = 1;
     /**
      * 邻接矩阵
      */
@@ -27,9 +27,9 @@ public class No3549FlowProblem {
     private int[] preVertex;
     /**
      * 顶点数量n
-     * 顶点标号为1~n
+     * 顶点标号为1~N
      */
-    private int n;
+    private int N;
 
     /**
      * bfs用队列
@@ -53,7 +53,7 @@ public class No3549FlowProblem {
     private int findMaxFlowWithDinic() {
         int maxFlow = 0;
         while (bfsFindArgumentingPath(true)) {
-            maxFlow += dfsToArgumentPath();
+            maxFlow += dfsToArgumentPath(S, Integer.MAX_VALUE);
         }
         return maxFlow;
     }
@@ -63,10 +63,32 @@ public class No3549FlowProblem {
      *
      * @return 可改进量
      */
-    private int dfsToArgumentPath() {
+    private int dfsToArgumentPath(int cur, int flow) {
 
-
-        return 0;
+        if (cur == N) {
+            //找到结果,开始增广
+            return flow;
+        }
+        int argumentFlowSum = 0, argumentFlow;
+        for (int i = S + 1; i <= N; i++) {
+            //层次往下,且容量不为空
+            if (preVertex[i] > preVertex[cur] && capMatrix[cur][i] > 0 && flow > 0) {
+                //继续往下,得到从终点返回的增广值
+                argumentFlow = dfsToArgumentPath(i, Math.min(flow, capMatrix[cur][i]));
+                if (argumentFlow == 0) {
+                    //没找到终点
+                    continue;
+                }
+                //增广
+                updateFlow(cur, i, argumentFlow);
+                //当前剩余流减去已增广部分
+                flow -= argumentFlow;
+                //已经增广的流量的统计
+                argumentFlowSum += argumentFlow;
+            }
+        }
+        //增广了多少返回多少
+        return argumentFlowSum;
     }
 
     /**
@@ -81,14 +103,14 @@ public class No3549FlowProblem {
         while (bfsFindArgumentingPath(false)) {
 //            System.out.println("找到增广路");
             //先查找到的增广路上的可改尽量
-            cur = n;
+            cur = N;
             while (preVertex[cur] > 0) {
 //                System.out.println("增广路经:c[" + preVertex[cur] + "][" + cur + "]=" + capMatrix[preVertex[cur]][cur] + ",flow=" + flow);
                 flow = Math.min(capMatrix[preVertex[cur]][cur], flow);
                 cur = preVertex[cur];
             }
             //更新流
-            cur = n;
+            cur = N;
             while (preVertex[cur] > 0) {
                 updateFlow(preVertex[cur], cur, flow);
                 cur = preVertex[cur];
@@ -106,7 +128,7 @@ public class No3549FlowProblem {
      */
     private boolean bfsFindArgumentingPath(boolean laminate) {
         //清空标记 与 前置顶点
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= N; i++) {
             preVertex[i] = -1;
         }
         que.add(1);
@@ -114,12 +136,12 @@ public class No3549FlowProblem {
         Integer cur;
         while (!que.isEmpty()) {
             cur = que.poll();
-            if (cur == n) {
+            if (cur == N) {
                 //到达终点
                 que.clear();
                 return true;
             }
-            for (int i = 1; i <= n; i++) {
+            for (int i = 1; i <= N; i++) {
                 //查找增广路,方便起见此处使用邻接矩阵.
                 if (preVertex[i] == -1 && capMatrix[cur][i] > 0) {
 //                    System.out.println("bfs--c[" + cur + "][" + i + "]=" + capMatrix[cur][i]);
@@ -176,11 +198,12 @@ public class No3549FlowProblem {
                 matrix[u][v] += c;
             }
             //将初始的容量矩阵信息存入此对象中
-            this.n = n - 1;
+            this.N = n - 1;
             this.capMatrix = matrix;
             this.preVertex = new int[n];
             //执行对象的查找最大流方法并打印最大流结果
-            System.out.println("Case " + seq + ": " + findMaxFlowWithEK());
+//            System.out.println("Case " + seq + ": " + findMaxFlowWithEK());
+            System.out.println("Case " + seq + ": " + findMaxFlowWithDinic());
         }
     }
 
