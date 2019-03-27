@@ -17,7 +17,7 @@ public class No868BinaryGap {
 
     public int binaryGap(int N) {
         int result = 0, prePos = -1, cur = 0;
-        for (int i = 0; i < 32; i++) {
+        for (int i = 0; N > 0; N >>= 1, i++) {
             cur = N & 1;
             //当前位置是1,计算距离上一个1的距离
             if (cur == 1) {
@@ -26,7 +26,6 @@ public class No868BinaryGap {
                 }
                 prePos = i;
             }
-            N >>= 1;
         }
         return result;
     }
