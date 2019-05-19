@@ -10,6 +10,6 @@ And remember the days for acm.
 
 | 题号 |    题名    | 难度 |                 类路径                  |
 | :---: | :--------: | :---: | :-------------------------------------: |
-|  53  | 最大子序和 | 简单 | LeetCode.repository.No53MaximumSubarray |
+|  53  | 最大子序和 | 简单 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
 
 
