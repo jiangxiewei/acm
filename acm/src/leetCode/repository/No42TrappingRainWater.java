@@ -21,25 +21,6 @@ public class No42TrappingRainWater {
         }
         return splitInTwoNew(height);
     }
-
-    /**
-     * 方法三,用栈
-     * @param height 数组
-     * @return 雨水面积
-     */
-    public int stack(int[] height) {
-        int result = 0;
-        Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < height.length; i++) {
-            if (stack.isEmpty()) {
-                //栈空,入栈
-                stack.push(i);
-            } else if (height[stack.peek()] > height[i]) {
-                //继续入栈
-            }
-        }
-        return result;
-    }
     
     /**
      * 方法二,与方法一本质相同,但是代码精简了很多.
