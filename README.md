@@ -6,6 +6,12 @@ And remember the days for acm.
 
 ## 题目分类
 
+### dfs,bfs
+| 题号 |    题名    | 难度 |                 类路径                  |
+| :---: | :--------: | :---: | :-------------------------------------: |
+| leetcode 22  | 括号生成 | 简单 | [leetCode.repository.No22GenerateParentheses](acm/src/leetCode/repository/No22GenerateParentheses.java) |
+
+
 ### 动态规划
 | 题号 |    题名    | 难度 |                 类路径                  |
 | :---: | :--------: | :---: | :-------------------------------------: |
