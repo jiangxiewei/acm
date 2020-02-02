@@ -1,4 +1,4 @@
-package leetCode.weeklyContest.week93;
+package leetCode.weeklyContest.week93no868;
 
 /**
  * No868BinaryGap
