@@ -21,3 +21,8 @@ And remember the days for acm.
 | 题号 |    题名    | 难度 |                 类路径                  |
 | :---: | :--------: | :---: | :-------------------------------------: |
 | hdu 3549 | Flow Problem | 简单 | [leetCode.repository.No53MaximumSubarray](acm/src/hdu/No3549FlowProblem.java)|
+
+### LeetCode
+| 题号 |    题名    | 难度 |                 类路径                  |
+| :---: | :--------: | :---: | :-------------------------------------: |
+| hdu 3549 | Flow Problem | 简单 | [leetCode.repository.No53MaximumSubarray](acm/src/hdu/No3549FlowProblem.java)|
