@@ -5,7 +5,7 @@
 
 ### 搜索
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
-| :---: | :--------: | :---: | :-------------------------------------: |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | leetcode 10 | 正则表达式匹配 | 困难? | 依旧普通的递归搜索题 |[leetCode.repository.No10.java](acm/src/leetCode/repository/No10.java)|
 | leetcode 22  | 括号生成 | 简单 | ez | [leetCode.repository.No22GenerateParentheses](acm/src/leetCode/repository/No22GenerateParentheses.java) |
 
