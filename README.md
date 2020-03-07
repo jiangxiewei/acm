@@ -6,10 +6,11 @@ And remember the days for acm.
 
 ## 题目分类
 
-### dfs,bfs
-| 题号 |    题名    | 难度 |                 类路径                  |
+### 搜索
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
 | :---: | :--------: | :---: | :-------------------------------------: |
-| leetcode 22  | 括号生成 | 简单 | [leetCode.repository.No22GenerateParentheses](acm/src/leetCode/repository/No22GenerateParentheses.java) |
+| leetcode 10 | 正则表达式匹配 | 困难? | 依旧普通的递归搜索题 |[leetCode.repository.No10.java](acm/src/leetCode/repository/No10.java)|
+| leetcode 22  | 括号生成 | 简单 | ez | [leetCode.repository.No22GenerateParentheses](acm/src/leetCode/repository/No22GenerateParentheses.java) |
 
 
 ### 动态规划
@@ -18,9 +19,9 @@ And remember the days for acm.
 | leetcode 53  | 最大子序和 | 简单 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
 
 ### 网络流
-| 题号 |    题名    | 难度 |                 类路径                  |
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
 | :---: | :--------: | :---: | :-------------------------------------: |
-| hdu 3549 | Flow Problem | 简单 | [hdu.No3549FlowProblem.java](acm/src/hdu/No3549FlowProblem.java)|
+| hdu 3549 | Flow Problem | 简单 | 完全模板题,可以测试自己写的网络流模板,但是输入有坑 | [hdu.No3549FlowProblem.java](acm/src/hdu/No3549FlowProblem.java)|
 
 ### LeetCode
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
