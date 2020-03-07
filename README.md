@@ -26,4 +26,4 @@ And remember the days for acm.
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 22 | 括号生成 | 中等? | 一般的搜索题 |[leetCode.repository.No22GenerateParentheses.java](acm/src/leetCode/repository/No22GenerateParentheses.java)|
-| 53 | 只出现一次的数字 II | 中等 | 普通做法很简单,但要实现"说明"就比较蛋疼.[不使用额外空间实现](https://blog.csdn.net/jiangxiewei/article/details/82227451) | [leetCode.repository.No137.java](acm/src/leetCode/repository/No137.java)|
+| 53 | 只出现一次的数字 II | 中等(困难) | 普通做法很简单,[不使用额外空间实现](https://blog.csdn.net/jiangxiewei/article/details/82227451)就略蛋疼 | [leetCode.repository.No137.java](acm/src/leetCode/repository/No137.java)|
