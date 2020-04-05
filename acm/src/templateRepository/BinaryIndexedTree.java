@@ -16,6 +16,9 @@ public class BinaryIndexedTree {
 
     public BinaryIndexedTree(int initialCap) {
         this.c = new ArrayList<>(initialCap);
+        for (int i = 0; i < initialCap; i++) {
+            c.add(0L);
+        }
     }
 
     private long lowbit(long a) {
@@ -26,8 +29,8 @@ public class BinaryIndexedTree {
         if (index == 0) {
             throw new IllegalArgumentException(" index can not be 0 ");
         }
-        for (int i = index; i < c.size(); index += lowbit(i)) {
-            c.set(index, c.get(index) + add);
+        for (int i = index; i < c.size(); i += lowbit(i)) {
+            c.set(i, c.get(i) + add);
         }
     }
 
