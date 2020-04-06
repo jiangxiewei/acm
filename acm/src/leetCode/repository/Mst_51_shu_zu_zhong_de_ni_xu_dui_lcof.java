@@ -1,5 +1,7 @@
 package leetCode.repository;
 
+import java.util.*;
+
 /**
  * @author jiang
  * @date 2020/3/30
@@ -9,10 +11,34 @@ public class Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof {
     public static void main(String[] args) {
         Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof lcof = new Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof();
         System.out.println(lcof.reversePairs(new int[]{7, 5, 6, 4})); //5
+        System.out.println(lcof.reversePairs(new int[]{1, 3, 2, 3, 1}));//4
+        System.out.println(lcof.reversePairs(new int[]{4, 5, 6, 7}));//0
     }
 
     public int reversePairs(int[] nums) {
-        return divideAndConquer(nums);
+//        return divideAndConquer(nums);
+        return bitWay(nums);
+    }
+
+    /**
+     * 树状数组法
+     *
+     * @param nums 输入数组
+     * @return 结果
+     */
+    public int bitWay(int[] nums) {
+        long result = 0;
+        List<Map.Entry<Integer, Integer>> lis = new ArrayList<>();
+        for (int i = 0; i < nums.length; i++) {
+            lis.add(new HashMap.SimpleEntry<>(nums[i], i + 1));
+        }
+        lis.sort(Map.Entry.comparingByKey());
+        BinaryIndexedTree tree = new BinaryIndexedTree(nums.length + 1);
+        for (Map.Entry<Integer, Integer> li : lis) {
+            result += tree.search(li.getValue());
+            tree.update(li.getValue(), 1);
+        }
+        return (int) ((long)nums.length * (nums.length - 1) / 2 - result);
     }
 
     /**
@@ -71,6 +97,58 @@ public class Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof {
             System.arraycopy(result, 0, nums, l, order);
         }
         return reversedCount;
+    }
+
+
+    /**
+     * @author jiang
+     * @date 2020/4/4
+     */
+    public class BinaryIndexedTree {
+
+        private final ArrayList<Long> c;
+
+        public BinaryIndexedTree() {
+            this(1024 + 1);
+        }
+
+        public BinaryIndexedTree(int initialCap) {
+            this.c = new ArrayList<>(initialCap);
+            for (int i = 0; i < initialCap; i++) {
+                c.add(0L);
+            }
+        }
+
+        private long lowbit(long a) {
+            return a & -a;
+        }
+
+        public void update(int index, long add) {
+            if (index == 0) {
+                throw new IllegalArgumentException(" index can not be 0 ");
+            }
+            for (int i = index; i < c.size(); i += lowbit(i)) {
+                c.set(i, c.get(i) + add);
+            }
+        }
+
+        private long search(int index) {
+            int result = 0;
+            for (int i = index; i > 0; i -= lowbit(i)) {
+                result += c.get(i);
+            }
+            return result;
+        }
+
+        public long sum(int from, int to) {
+            if (from == 0) {
+                return search(to);
+            } else {
+                return search(to) - search(from);
+            }
+        }
+
+
     }
 
 }
