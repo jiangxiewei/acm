@@ -1,4 +1,4 @@
-package leetCode.interview.bytedance;
+package leetCode.interview.bytedance.string;
 
 /**
  * 无重复字符的最长子串

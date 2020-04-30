@@ -1,4 +1,4 @@
-package leetCode.interview.bytedance;
+package leetCode.interview.bytedance.string;
 
 /**
  * 最长公共前缀 ,所有输入只包含小写字母 a-z 。

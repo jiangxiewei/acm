@@ -1,4 +1,4 @@
-package leetCode.interview.bytedance;
+package leetCode.interview.bytedance.string;
 
 /**
  * 字符串相乘
