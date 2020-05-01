@@ -33,3 +33,6 @@
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
 | 面试题17.16 | 按摩师 | 简单 | 基本DP题,可当入门题 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题51 | 数组中的逆序对 | 困难(?) | 树状数组 或 归并法 | [leetCode.repository.Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java](acm/src/leetCode/repository/Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java) |
+
+#### leetcode专题系列
+字节跳动专题,见我[博客](https://blog.csdn.net/jiangxiewei/article/details/105878182)
