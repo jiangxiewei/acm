@@ -2,24 +2,27 @@ package leetCode.interview.bytedance.string;
 
 /**
  * 字符串相乘
+ * <br/>
  * 给定两个以字符串形式表示的非负整数 num1 和 num2，返回 num1 和 num2 的乘积，它们的乘积也表示为字符串形式。
- * <p>
- * 示例 1:
+ * <br/>
+ * 示例 1: <br/>
  * 输入: num1 = "2", num2 = "3"
  * 输出: "6"
- * <p>
- * 示例 2:
+ * <br/>
+ * 示例 2: <br/>
  * 输入: num1 = "123", num2 = "456"
  * 输出: "56088"
- * <p>
- * 说明：
- * num1 和 num2 的长度小于110。
- * num1 和 num2 只包含数字 0-9。
- * num1 和 num2 均不以零开头，除非是数字 0 本身。
+ * <br/>
+ * 说明：<br/>
+ * num1 和 num2 的长度小于110。 <br/>
+ * num1 和 num2 只包含数字 0-9。 <br/>
+ * num1 和 num2 均不以零开头，除非是数字 0 本身。 <br/>
  * 不能使用任何标准库的大数类型（比如 BigInteger）或直接将输入转换为整数来处理。
+ * <br/>
  *
  * @author jiang
  * @date 2020/4/29
+ * @apiNote https://leetcode-cn.com/explore/interview/card/bytedance/242/string/1015/
  */
 public class String1015 {
 

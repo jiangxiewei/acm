@@ -3,26 +3,28 @@ package leetCode.interview.bytedance.string;
 import java.util.Arrays;
 
 /**
- * 字符串的排列
- * 给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。
- * 换句话说，第一个字符串的排列之一是第二个字符串的子串。
- *
- * 示例1:
+ * 字符串的排列 <br/>
+ * 给定两个字符串 s1 和 s2，写一个函数来判断 s2 是否包含 s1 的排列。 <br/>
+ * 换句话说，第一个字符串的排列之一是第二个字符串的子串。 <br/>
+ * <p>
+ * 示例1:<br/>
  * 输入: s1 = "ab" s2 = "eidbaooo"
  * 输出: True
  * 解释: s2 包含 s1 的排列之一 ("ba").
- *
- * 示例2:
+ * <br/>
+ * 示例2:<br/>
  * 输入: s1= "ab" s2 = "eidboaoo"
  * 输出: False
- *
+ * <br/>
  * 注意：
- *
- * 输入的字符串只包含小写字母
+ * <br/>
+ * 输入的字符串只包含小写字母<br/>
  * 两个字符串的长度都在 [1, 10,000] 之间
+ * <br/>
  *
  * @author jiang
  * @date 2020/4/29
+ * @apiNote https://leetcode-cn.com/explore/interview/card/bytedance/242/string/1016/
  */
 public class String1016 {
 

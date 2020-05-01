@@ -1,20 +1,21 @@
 package leetCode.interview.bytedance.string;
 
 /**
- * 最长公共前缀 ,所有输入只包含小写字母 a-z 。
+ * 最长公共前缀<br/>
+ * 所有输入只包含小写字母 a-z 。 <br/>
  * 示例 1:
- *
+ * <br/>
  * 输入: ["flower","flow","flight"]
  * 输出: "fl"
- *
+ * <br/>
  * 示例 2:
- *
+ * <br/>
  * 输入: ["dog","racecar","car"]
  * 输出: ""
- * 解释: 输入不存在公共前缀。
+ * <br/>解释: 输入不存在公共前缀。
  *
- * @apiNote https://leetcode-cn.com/explore/interview/card/bytedance/242/string/1014/
  * @author jiang
+ * @apiNote https://leetcode-cn.com/explore/interview/card/bytedance/242/string/1014/
  * @date 2020/4/29
  */
 public class String1014 {

@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author jiang
  * @date 2020/4/30
+ * @apiNote https://leetcode-cn.com/explore/interview/card/bytedance/242/string/1044/
  */
 public class String1044 {
 

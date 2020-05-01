@@ -31,6 +31,7 @@ import java.util.StringJoiner;
  *
  * @author jiang
  * @date 2020/4/30
+ * @apiNote https://leetcode-cn.com/explore/interview/card/bytedance/242/string/1011/
  */
 public class String1011 {
 
