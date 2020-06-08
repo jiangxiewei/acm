@@ -21,6 +21,11 @@
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | hdu 3549 | Flow Problem | 简单 | 完全模板题,可以测试自己写的网络流模板,但是输入有坑 | [hdu.No3549FlowProblem.java](acm/src/hdu/No3549FlowProblem.java)|
 
+### 并查集
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| leetcode 990 | satisfiability-of-equality-equations | 简单 | 模板题,可以测试自己写的模板 | [leetCode.No990SatisfiabilityOfEqualityEquations.java](acm/src/leetCode/repository/No990SatisfiabilityOfEqualityEquations.java)|
+
 ### LeetCode
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
@@ -31,6 +36,7 @@
 | 84 | 柱状图中最大的矩形 | 困难 | 运用栈可以进一步优化. |[leetCode.repository.No84.java](acm/src/leetCode/repository/No84.java)|
 | 862 | 和至少为 K 的最短子数组 | 困难 | 找定义,找优化点,比较过程中更新比较集来实现优化 |[leetCode.repository.No862shortestSubarrayWithSumAtLeastK.java](acm/src/leetCode/repository/No862shortestSubarrayWithSumAtLeastK.java)|
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
+| 990 | 等式方程的可满足性 | 简单 | 模板题,可以测试自己写的模板 | [leetCode.No990SatisfiabilityOfEqualityEquations.java](acm/src/leetCode/repository/No990SatisfiabilityOfEqualityEquations.java)|
 | 面试题17.16 | 按摩师 | 简单 | 基本DP题,可当入门题 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题51 | 数组中的逆序对 | 困难(?) | 树状数组 或 归并法 | [leetCode.repository.Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java](acm/src/leetCode/repository/Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java) |
 
