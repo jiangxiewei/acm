@@ -54,9 +54,8 @@ public class No990SatisfiabilityOfEqualityEquations {
     public boolean equationsPossible(String[] equations) {
         UnionFindSets sets = new UnionFindSets(26);
         for (String equation : equations) {
-            String[] split = equation.split("(!=|==)");
-            int x = split[0].charAt(0) - 'a', y = split[1].charAt(0) - 'a';
-            if (equation.contains("!=")) {
+            int x = equation.charAt(0) - 'a', y = equation.charAt(3) - 'a';
+            if (equation.charAt(1) == '!') {
                 if (x == y || sets.find(x) == sets.find(y)) {
                     return false;
                 }
@@ -65,11 +64,12 @@ public class No990SatisfiabilityOfEqualityEquations {
             }
         }
         for (String equation : equations) {
-            String[] split = equation.split("(!=|==)");
-            int x = split[0].charAt(0) - 'a', y = split[1].charAt(0) - 'a';
-            if (equation.contains("!=") && sets.find(x) == sets.find(y)) {
-                return false;
-            } else if (equation.contains("==") && sets.find(x) != sets.find(y)) {
+            int x = equation.charAt(0) - 'a', y = equation.charAt(3) - 'a';
+            if (equation.charAt(1) == '!') {
+                if (sets.find(x) == sets.find(y)) {
+                    return false;
+                }
+            } else if (sets.find(x) != sets.find(y)) {
                 return false;
             }
         }
