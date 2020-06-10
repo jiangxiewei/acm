@@ -11,10 +11,11 @@
 
 
 ### 动态规划
-| 题号 |    题名    | 难度 |                 类路径                  |
-| :---: | :--------: | :---: | :-------------------------------------: |
-| leetcode 53  | 最大子序和 | 简单 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
-| 面试题17.16 | 按摩师 | 简单 |  [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
+| 题号 |    题名    | 难度 | 简介 |               类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| leetcode 53  | 最大子序和 | 简单 | 还好 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
+| 面试题17.16 | 按摩师 | 简单 | easy | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
+| 面试题46 | 把数字翻译成字符串 | 简单 | 也可以用搜索 | [leetCode.repository.Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java](acm/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
 
 ### 网络流
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
