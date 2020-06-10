@@ -1,6 +1,5 @@
 package leetCode.repository;
 
-import java.util.LinkedList;
 import java.util.function.Function;
 
 /**
