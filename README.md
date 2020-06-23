@@ -40,6 +40,7 @@
 | 22 | 括号生成 | 中等(简单) | 一般的搜索题 |[leetCode.repository.No22GenerateParentheses.java](acm/src/leetCode/repository/No22GenerateParentheses.java)|
 | 42 | 接雨水 | 困难 | 太久了,忘了内容了 |[leetCode.repository.No42TrappingRainWater.java](acm/src/leetCode/repository/No42TrappingRainWater.java)|
 | 53 | 只出现一次的数字 II | 中等(困难) | 普通做法很简单,[不使用额外空间实现](https://blog.csdn.net/jiangxiewei/article/details/82227451) 就略麻烦,可能需要逻辑代数知识 | [leetCode.repository.No137.java](acm/src/leetCode/repository/No137.java)|
+| 67 | 二进制求和 | 简单 | 高精度数API可解,题解也有位运算法解 | [leetCode.repository.No67AddBinary.java](acm/src/leetCode/repository/No67AddBinary.java)|
 | 84 | 柱状图中最大的矩形 | 困难 | 运用栈可以进一步优化. |[leetCode.repository.No84.java](acm/src/leetCode/repository/No84.java)|
 | 297 | 二叉树的序列化与反序列化 | 困难 | 树的遍历的运用. |[leetCode.repository.No297SerializeAndDeserializeBinaryTree.java](acm/src/leetCode/repository/No297SerializeAndDeserializeBinaryTree.java)|
 | 739 | 每日温度 | 中等 | 单调栈 或 贪心 |[leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java)|
@@ -47,5 +48,6 @@
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
 | 990 | 等式方程的可满足性 | 简单 | 模板题,可以测试自己写的模板 | [leetCode.No990SatisfiabilityOfEqualityEquations.java](acm/src/leetCode/repository/No990SatisfiabilityOfEqualityEquations.java)|
 | 1014 | 最佳观光组合 | 简单 | 贪心 | [leetCode.No1014BestSightseeingPair.java](acm/src/leetCode/repository/No1014BestSightseeingPair.java)|
+| 面试题16.18 | 模式匹配 | 中等 | 递归,枚举,剪枝,边界 | [leetCode.Mst_16_18_PatternMatchingLcci.java](acm/src/leetCode/repository/Mst_16_18_PatternMatchingLcci.java)|
 | 面试题17.16 | 按摩师 | 简单 | 基本DP题,可当入门题 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题51 | 数组中的逆序对 | 困难(?) | 树状数组 或 归并法 | [leetCode.repository.Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java](acm/src/leetCode/repository/Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java) |
