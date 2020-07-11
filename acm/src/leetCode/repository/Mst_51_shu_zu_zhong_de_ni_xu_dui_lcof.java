@@ -104,7 +104,7 @@ public class Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof {
      * @author jiang
      * @date 2020/4/4
      */
-    public class BinaryIndexedTree {
+    private class BinaryIndexedTree {
 
         private final ArrayList<Long> c;
 

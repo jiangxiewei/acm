@@ -15,6 +15,7 @@ public class BinaryIndexedTree {
     }
 
     public BinaryIndexedTree(int initialCap) {
+        initialCap++;
         this.c = new ArrayList<>(initialCap);
         for (int i = 0; i < initialCap; i++) {
             c.add(0L);
@@ -25,9 +26,16 @@ public class BinaryIndexedTree {
         return a & -a;
     }
 
+    /**
+     * 更新index位置的统计值
+     *
+     * @param index 取值范围[-1,initialCap]
+     * @param add   添加的值
+     */
     public void update(int index, long add) {
-        if (index == 0) {
-            throw new IllegalArgumentException(" index can not be 0 ");
+        index++;
+        if (index < 0) {
+            throw new IllegalArgumentException(" index can not be less than -1 ");
         }
         for (int i = index; i < c.size(); i += lowbit(i)) {
             c.set(i, c.get(i) + add);
@@ -35,6 +43,7 @@ public class BinaryIndexedTree {
     }
 
     private long search(int index) {
+        index++;
         int result = 0;
         for (int i = index; i > 0; i -= lowbit(i)) {
             result += c.get(i);
@@ -42,13 +51,13 @@ public class BinaryIndexedTree {
         return result;
     }
 
+    /**
+     * @param from 起始点
+     * @param to   结束点
+     * @return 返回[from, to]的结果值.
+     */
     public long sum(int from, int to) {
-        if (from == 0) {
-            return search(to);
-        } else {
-            return search(to) - search(from);
-        }
+        return search(to) - search(from - 1);
     }
-
 
 }

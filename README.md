@@ -32,6 +32,12 @@
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | leetcode 990 | satisfiability-of-equality-equations | 简单 | 模板题,可以测试自己写的模板 | [leetCode.No990SatisfiabilityOfEqualityEquations.java](acm/src/leetCode/repository/No990SatisfiabilityOfEqualityEquations.java)|
 
+### 树状数组
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| leetcode 315 | 计算右侧小于当前元素的个数 | 困难 | 树状数组 + 离散化,注意下数据有重复 | [leetCode.No315CountOfSmallerNumbersAfterSelf.java](acm/src/leetCode/repository/No315CountOfSmallerNumbersAfterSelf.java)|
+
+
 ### LeetCode
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
@@ -43,6 +49,7 @@
 | 67 | 二进制求和 | 简单 | 高精度数API可解,题解也有位运算法解 | [leetCode.repository.No67AddBinary.java](acm/src/leetCode/repository/No67AddBinary.java)|
 | 84 | 柱状图中最大的矩形 | 困难 | 运用栈可以进一步优化. |[leetCode.repository.No84.java](acm/src/leetCode/repository/No84.java)|
 | 297 | 二叉树的序列化与反序列化 | 困难 | 树的遍历的运用. |[leetCode.repository.No297SerializeAndDeserializeBinaryTree.java](acm/src/leetCode/repository/No297SerializeAndDeserializeBinaryTree.java)|
+| 315 | 计算右侧小于当前元素的个数 | 困难 | 树状数组 + 离散化,注意下数据有重复 | [leetCode.No315CountOfSmallerNumbersAfterSelf.java](acm/src/leetCode/repository/No315CountOfSmallerNumbersAfterSelf.java)|
 | 739 | 每日温度 | 中等 | 单调栈 或 贪心 |[leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java)|
 | 862 | 和至少为 K 的最短子数组 | 困难 | 找定义,找优化点,比较过程中更新比较集来实现优化 |[leetCode.repository.No862shortestSubarrayWithSumAtLeastK.java](acm/src/leetCode/repository/No862shortestSubarrayWithSumAtLeastK.java)|
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
