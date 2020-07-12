@@ -37,8 +37,14 @@
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | leetcode 315 | 计算右侧小于当前元素的个数 | 困难 | 树状数组 + 离散化,注意下数据有重复 | [leetCode.No315CountOfSmallerNumbersAfterSelf.java](acm/src/leetCode/repository/No315CountOfSmallerNumbersAfterSelf.java)|
 
+### 图论
 
-### LeetCode
+#### Dijkstra
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 5211 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No5211PathWithMaximumProbability.java](acm/src/leetCode/repository/No5211PathWithMaximumProbability.java)|
+
+### LeetCode刷题
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 10 | 正则表达式匹配 | 困难(中等) | 依旧普通的递归搜索题 |[leetCode.repository.No10.java](acm/src/leetCode/repository/No10.java)|
@@ -55,6 +61,19 @@
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
 | 990 | 等式方程的可满足性 | 简单 | 模板题,可以测试自己写的模板 | [leetCode.No990SatisfiabilityOfEqualityEquations.java](acm/src/leetCode/repository/No990SatisfiabilityOfEqualityEquations.java)|
 | 1014 | 最佳观光组合 | 简单 | 贪心 | [leetCode.No1014BestSightseeingPair.java](acm/src/leetCode/repository/No1014BestSightseeingPair.java)|
+| 5211 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No5211PathWithMaximumProbability.java](acm/src/leetCode/repository/No5211PathWithMaximumProbability.java)|
+| 5460 | 好数对的数目 | 简单 | 签到题 | [leetCode.No5460NumberOfGoodPairs.java](acm/src/leetCode/repository/No5460NumberOfGoodPairs.java)|
+| 5461 | 仅含 1 的子串数 | 中等 | 等差数列求和 | [leetCode.No5461NumberOfSubstringsWithOnly1s.java](acm/src/leetCode/repository/No5461NumberOfSubstringsWithOnly1s.java)|
 | 面试题16.18 | 模式匹配 | 中等 | 递归,枚举,剪枝,边界 | [leetCode.Mst_16_18_PatternMatchingLcci.java](acm/src/leetCode/repository/Mst_16_18_PatternMatchingLcci.java)|
 | 面试题17.16 | 按摩师 | 简单 | 基本DP题,可当入门题 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题51 | 数组中的逆序对 | 困难(?) | 树状数组 或 归并法 | [leetCode.repository.Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java](acm/src/leetCode/repository/Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java) |
+
+## leetcode周赛
+打的不多,不过还是挺有意思的.
+### 第197场周赛
+| 题号 |    题名    | 难度 | 简介 |                 类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 5460 | 好数对的数目 | 简单 | 签到题 | [leetCode.No5460NumberOfGoodPairs.java](acm/src/leetCode/repository/No5460NumberOfGoodPairs.java)|
+| 5461 | 仅含 1 的子串数 | 中等 | 等差数列求和 | [leetCode.No5461NumberOfSubstringsWithOnly1s.java](acm/src/leetCode/repository/No5461NumberOfSubstringsWithOnly1s.java)|
+| 5211 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No5211PathWithMaximumProbability.java](acm/src/leetCode/repository/No5211PathWithMaximumProbability.java)|
+| 5463 | 服务中心的最佳位置 | 困难 | 说实话我时间显然不够. | 未完待续 |
