@@ -18,10 +18,10 @@ import java.util.*;
  * @author jxw
  * @date 2020/7/12
  */
-public class No5211PathWithMaximumProbability {
+public class No1514PathWithMaximumProbability {
 
     public static void main(String[] args) {
-        No5211PathWithMaximumProbability no = new No5211PathWithMaximumProbability();
+        No1514PathWithMaximumProbability no = new No1514PathWithMaximumProbability();
         //0.25
         System.out.println(no.maxProbability(3, new int[][]{{0, 1}, {1, 2}, {0, 2}},
                 new double[]{0.5, 0.5, 0.2}, 0, 2));
@@ -55,7 +55,7 @@ public class No5211PathWithMaximumProbability {
     /**
      * Dijkstra+堆优化+邻接表.
      */
-    private class Dijkstra implements MaxProbabilityItfc {
+    private static class Dijkstra implements MaxProbabilityItfc {
 
         @Override
         public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {

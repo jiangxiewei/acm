@@ -28,10 +28,10 @@ package leetCode.repository;
  * @author jxw
  * @date 2020/7/12
  */
-public class No5461NumberOfSubstringsWithOnly1s {
+public class No1513NumberOfSubstringsWithOnly1s {
 
     public static void main(String[] args) {
-        No5461NumberOfSubstringsWithOnly1s no = new No5461NumberOfSubstringsWithOnly1s();
+        No1513NumberOfSubstringsWithOnly1s no = new No1513NumberOfSubstringsWithOnly1s();
         //9
         System.out.println(no.numSub("0110111"));
         //2

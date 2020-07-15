@@ -6,10 +6,10 @@ package leetCode.repository;
  * @author jxw
  * @date 2020/7/12
  */
-public class No5460NumberOfGoodPairs {
+public class No1512NumberOfGoodPairs {
 
     public static void main(String[] args) {
-        No5460NumberOfGoodPairs no = new No5460NumberOfGoodPairs();
+        No1512NumberOfGoodPairs no = new No1512NumberOfGoodPairs();
         System.out.println(no.numIdenticalPairs(new int[]{1,2,3,1,1,3}));
         System.out.println(no.numIdenticalPairs(new int[]{1,1,1,1}));
     }
