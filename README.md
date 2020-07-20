@@ -65,6 +65,8 @@
 | 1513 | 仅含 1 的子串数 | 中等 | 等差数列求和 | [leetCode.No1513NumberOfSubstringsWithOnly1s.java](acm/src/leetCode/repository/No1513NumberOfSubstringsWithOnly1s.java)|
 | 1514 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No1514PathWithMaximumProbability.java](acm/src/leetCode/repository/No1514PathWithMaximumProbability.java)|
 | 1515 | 服务中心的最佳位置 | 困难 | 证明凸函数,三分夹逼 | [leetCode.No1515BestPositionForAServiceCentre.java](acm/src/leetCode/repository/No1515BestPositionForAServiceCentre.java) |
+| 1518 | 换酒问题 | 简单 | 签到题 | [leetCode.No1518WaterBottles.java](acm/src/leetCode/repository/No1518WaterBottles.java)|
+| 1519 | 子树中标签相同的节点数 | 中等 | 邻接表,DFS | [leetCode.No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java](acm/src/leetCode/repository/No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java)|
 | 面试题16.18 | 模式匹配 | 中等 | 递归,枚举,剪枝,边界 | [leetCode.Mst_16_18_PatternMatchingLcci.java](acm/src/leetCode/repository/Mst_16_18_PatternMatchingLcci.java)|
 | 面试题17.16 | 按摩师 | 简单 | 基本DP题,可当入门题 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题51 | 数组中的逆序对 | 困难(?) | 树状数组 或 归并法 | [leetCode.repository.Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java](acm/src/leetCode/repository/Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java) |
@@ -78,3 +80,11 @@
 | 1513 | 仅含 1 的子串数 | 中等 | 等差数列求和 | [leetCode.No1513NumberOfSubstringsWithOnly1s.java](acm/src/leetCode/repository/No1513NumberOfSubstringsWithOnly1s.java)|
 | 1514 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No1514PathWithMaximumProbability.java](acm/src/leetCode/repository/No1514PathWithMaximumProbability.java)|
 | 1515 | 服务中心的最佳位置 | 困难 | 证明凸函数,三分夹逼 | [leetCode.No1515BestPositionForAServiceCentre.java](acm/src/leetCode/repository/No1515BestPositionForAServiceCentre.java) |
+
+### 第198场周赛
+| 题号 |    题名    | 难度 | 简介 |                 类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 1518 | 换酒问题 | 简单 | 签到题 | [leetCode.No1518WaterBottles.java](acm/src/leetCode/repository/No1518WaterBottles.java)|
+| 1519 | 子树中标签相同的节点数 | 中等 | 邻接表,DFS | [leetCode.No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java](acm/src/leetCode/repository/No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java)|
+| 1520 |  | 困难 | 在做了 | |
+| 1521 | 找到最接近目标值的函数值 | 困难 | 在做了 | |
