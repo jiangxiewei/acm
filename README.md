@@ -87,4 +87,4 @@
 | 1518 | 换酒问题 | 简单 | 签到题 | [leetCode.No1518WaterBottles.java](acm/src/leetCode/repository/No1518WaterBottles.java)|
 | 1519 | 子树中标签相同的节点数 | 中等 | 邻接表,DFS | [leetCode.No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java](acm/src/leetCode/repository/No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java)|
 | 1520 |  | 困难 | 在做了 | |
-| 1521 | 找到最接近目标值的函数值 | 困难 | 在做了 | |
+| 1521 | 找到最接近目标值的函数值 | 困难 | 利用与运算性质以及结果集数据量限制 | [leetCode.No1521FindAValueOfAMysteriousFunctionClosestToTarget.java](acm/src/leetCode/repository/No1521FindAValueOfAMysteriousFunctionClosestToTarget.java) |
