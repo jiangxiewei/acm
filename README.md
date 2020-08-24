@@ -72,7 +72,17 @@
 | 面试题51 | 数组中的逆序对 | 困难(?) | 树状数组 或 归并法 | [leetCode.repository.Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java](acm/src/leetCode/repository/Mst_51_shu_zu_zhong_de_ni_xu_dui_lcof.java) |
 
 ## leetcode周赛
+
 打的不多,不过还是挺有意思的.
+
+### 第195场周赛
+| 题号 |    题名    | 难度 | 简介 |                 类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 1496 | 判断路径是否相交 | 简单 | 签到题 | [leetCode.No1496PathCrossing.java](acm/src/leetCode/repository/No1496PathCrossing.java)|
+| 1497 | 仅含 1 的子串数 | 中等 | 找性质,找到两个重要性质就很好借. | [leetCode.No1497CheckIfArrayPairsAreDivisibleByK.java](acm/src/leetCode/repository/No1497CheckIfArrayPairsAreDivisibleByK.java)|
+| 1498 | 满足条件的子序列数目 | 中等 | 在做了 | [leetCode.No1498NumberOfSubsequencesThatSatisfyTheGivenSumCondition.java](acm/src/leetCode/repository/No1498NumberOfSubsequencesThatSatisfyTheGivenSumCondition.java)|
+| 1499 | 在做了 | 在做了 | 在做了 | [leetCode..java](acm/src/leetCode/repository/.java)|
+
 ### 第197场周赛
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
@@ -86,5 +96,13 @@
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 1518 | 换酒问题 | 简单 | 签到题 | [leetCode.No1518WaterBottles.java](acm/src/leetCode/repository/No1518WaterBottles.java)|
 | 1519 | 子树中标签相同的节点数 | 中等 | 邻接表,DFS | [leetCode.No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java](acm/src/leetCode/repository/No1519NumberOfNodesInTheSubTreeWithTheSameLabel.java)|
-| 1520 |  | 困难 | 在做了 | |
+| 1520 | 在做了 | 困难 | 在做了 | |
 | 1521 | 找到最接近目标值的函数值 | 困难 | 利用与运算性质以及结果集数据量限制 | [leetCode.No1521FindAValueOfAMysteriousFunctionClosestToTarget.java](acm/src/leetCode/repository/No1521FindAValueOfAMysteriousFunctionClosestToTarget.java) |
+
+### 第201场周赛
+| 题号 |    题名    | 难度 | 简介 |                 类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 1544 | 整理字符串 | 简单 | 1.模拟 2.栈 3.递归 | [leetCode.No1544MakeTheStringGreat.java](acm/src/leetCode/repository/No1544MakeTheStringGreat.java)|
+| 1545 | 找出第 N 个二进制字符串中的第 K 位 | 中等 | 溯源,可递归. | [leetCode.No1545FindKthBitInNthBinaryString.java](acm/src/leetCode/repository/No1545FindKthBitInNthBinaryString.java)|
+| 1546 | 在做了 |  |  | [leetCode..java](acm/src/leetCode/repository/.java)|
+| 1547 | 在做了 |  |  | [leetCode..java](acm/src/leetCode/repository/.java)|
