@@ -7,6 +7,7 @@
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | leetcode 739 | 每日温度 | 中等 | 单调栈 或 贪心 |[leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java)|
+| leetcode 1544 | 整理字符串 | 简单 | 1.模拟 2.栈 3.递归 | [leetCode.No1544MakeTheStringGreat.java](acm/src/leetCode/repository/No1544MakeTheStringGreat.java)|
 
 ### 搜索
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
@@ -21,11 +22,6 @@
 | leetcode 53  | 最大子序和 | 简单 | 还好 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
 | 面试题17.16 | 按摩师 | 简单 | 尝试从DFS->尾递归->DP的一个推断流程,注释里有 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题46 | 把数字翻译成字符串 | 简单 | 也可以用搜索 | [leetCode.repository.Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java](acm/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
-
-### 网络流
-| 题号 |    题名    | 难度 | 简介 |                类路径                  |
-| :---: | :--------: | :---: | :---: | :-------------------------------------: |
-| hdu 3549 | Flow Problem | 简单 | 完全模板题,可以测试自己写的网络流模板,但是输入有坑 | [hdu.No3549FlowProblem.java](acm/src/hdu/No3549FlowProblem.java)|
 
 ### 并查集
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
@@ -44,7 +40,12 @@
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 5211 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No5211PathWithMaximumProbability.java](acm/src/leetCode/repository/No5211PathWithMaximumProbability.java)|
 
-### LeetCode刷题
+#### 网络流
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| hdu 3549 | Flow Problem | 简单 | 完全模板题,可以测试自己写的网络流模板,但是输入有坑 | [hdu.No3549FlowProblem.java](acm/src/hdu/No3549FlowProblem.java)|
+
+## LeetCode刷题
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 10 | 正则表达式匹配 | 困难(中等) | 依旧普通的递归搜索题 |[leetCode.repository.No10.java](acm/src/leetCode/repository/No10.java)|
