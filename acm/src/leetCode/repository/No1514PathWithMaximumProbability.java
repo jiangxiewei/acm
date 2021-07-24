@@ -1,6 +1,5 @@
 package leetCode.repository;
 
-import javafx.util.Pair;
 
 import java.util.*;
 
@@ -93,6 +92,24 @@ public class No1514PathWithMaximumProbability {
                 }
             }
             return djk[end];
+        }
+    }
+
+    static class Pair<T,R> {
+        private T key;
+        private R value;
+
+        public Pair(T key, R value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public T getKey() {
+            return key;
+        }
+
+        public R getValue() {
+            return value;
         }
     }
 
