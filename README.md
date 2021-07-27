@@ -46,11 +46,15 @@
 | hdu 3549 | Flow Problem | 简单 | 完全模板题,可以测试自己写的网络流模板,但是输入有坑 | [hdu.No3549FlowProblem.java](acm/src/hdu/No3549FlowProblem.java)|
 
 ## LeetCode刷题
+
+> 括号里是个人认为的难度
+
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 10 | 正则表达式匹配 | 困难(中等) | 依旧普通的递归搜索题 |[leetCode.repository.No10.java](acm/src/leetCode/repository/No10.java)|
 | 15 | 三数之和 | 中等 | 两数之和进阶版(本质一样) |[leetCode.repository.No15_3sum.java](acm/src/leetCode/repository/No15_3sum.java)|
 | 22 | 括号生成 | 中等(简单) | 一般的搜索题 |[leetCode.repository.No22GenerateParentheses.java](acm/src/leetCode/repository/No22GenerateParentheses.java)|
+| 25 | K 个一组翻转链表 | 困难(中等) | 模拟题 |[leetCode.repository.No25ReverseNodesInKGroup.java](acm/src/leetCode/repository/No25ReverseNodesInKGroup.java)|
 | 42 | 接雨水 | 困难 | 太久了,忘了内容了 |[leetCode.repository.No42TrappingRainWater.java](acm/src/leetCode/repository/No42TrappingRainWater.java)|
 | 53 | 只出现一次的数字 II | 中等(困难) | 普通做法很简单,[不使用额外空间实现](https://blog.csdn.net/jiangxiewei/article/details/82227451) 就略麻烦,可能需要逻辑代数知识 | [leetCode.repository.No137.java](acm/src/leetCode/repository/No137.java)|
 | 67 | 二进制求和 | 简单 | 高精度数API可解,题解也有位运算法解 | [leetCode.repository.No67AddBinary.java](acm/src/leetCode/repository/No67AddBinary.java)|

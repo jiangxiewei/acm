@@ -14,57 +14,75 @@ import java.util.List;
 public class No25ReverseNodesInKGroup {
 
     public static void main(String[] args) {
-        No25ReverseNodesInKGroup test = new No25ReverseNodesInKGroup();
-        test.reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 3).print();
-        test = new No25ReverseNodesInKGroup();
-        test.reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 1).print();
-        test = new No25ReverseNodesInKGroup();
-        test.reverseKGroup(ListNode.packageList(1), 1).print();
-        test = new No25ReverseNodesInKGroup();
-        test.reverseKGroup(ListNode.packageList(1,2,3,4,5), 2).print();
+        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 3).print();
+        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 1).print();
+        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1), 1).print();
+        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1,2,3,4,5), 2).print();
     }
 
-    public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode cur = head;
-        while (cur != null) {
-            recursion(cur, k);
-            if (isBreak) {
-                break;
+    public ListNode reverseKGroup(ListNode head, int k){
+        return new 自己想的递归模式().reverseKGroup(head, k);
+    }
+
+    /**
+     * 解法接口
+     */
+    private interface ReverseKGroup {
+        ListNode reverseKGroup(ListNode head, int k);
+    }
+
+    /**
+     * 递归方式实现,个人感觉写的很不优雅("写的什么辣鸡玩意").
+     */
+    private static class 自己想的递归模式 implements ReverseKGroup {
+
+        @Override
+        public ListNode reverseKGroup(ListNode head, int k) {
+            var cur = head;
+            while (cur != null) {
+                recursion(cur, k);
+                if (isBreak) {
+                    break;
+                }
+                cur.next = deepestRecursionTail;
+                beforeRecursionHead = cur;
+                cur = cur.next;
             }
-            cur.next = deepestRecursionTail;
-            beforeRecursionHead = cur;
-            cur = cur.next;
+            return firstResult == null ? head : firstResult;
         }
-        return firstResult == null ? head : firstResult;
-    }
 
-    private ListNode firstResult = null;
-    boolean isBreak = false;
-    private ListNode beforeRecursionHead = null;
-    private ListNode deepestRecursionTail = null;
-    public ListNode recursion(ListNode node, int cur) {
-        if (cur > 0 && node == null) {
-            isBreak = true;
-        } else if (cur == 1) {
-            if (beforeRecursionHead != null) {
-                beforeRecursionHead.next = node;
+        private ListNode firstResult = null;
+        private boolean isBreak = false;
+        private ListNode beforeRecursionHead = null;
+        private ListNode deepestRecursionTail = null;
+        public ListNode recursion(ListNode node, int cur) {
+            if (cur > 0 && node == null) {
+                isBreak = true;
+            } else if (cur == 1) {
+                if (beforeRecursionHead != null) {
+                    beforeRecursionHead.next = node;
+                }
+                if (firstResult == null) {
+                    firstResult = node;
+                }
+                deepestRecursionTail = node.next;
+            } else {
+                recursion(node.next, cur - 1);
+                if (isBreak) {
+                    return node;
+                }
+                if (node.next != null) {
+                    node.next.next = node;
+                }
             }
-            if (firstResult == null) {
-                firstResult = node;
-            }
-            deepestRecursionTail = node.next;
-        } else {
-            recursion(node.next, cur - 1);
-            if (isBreak) {
-                return node;
-            }
-            if (node.next != null) {
-                node.next.next = node;
-            }
+            return node;
         }
-        return node;
+
     }
 
+    /**
+     * 莫赋值
+     */
     private static class ListNode {
         int val;
         ListNode next;
