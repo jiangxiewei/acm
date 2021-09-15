@@ -22,6 +22,7 @@
 | leetcode 53  | 最大子序和 | 简单 | 还好 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
 | 面试题17.16 | 按摩师 | 简单 | 尝试从DFS->尾递归->DP的一个推断流程,注释里有 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题46 | 把数字翻译成字符串 | 简单 | 也可以用搜索 | [leetCode.repository.Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java](acm/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
+| leetcode 416  | 分割等和子集 | 中等 | 01背包题,由于"物品"没有"价值",所以结果值可以只用true false代表可达性 | [leetCode.repository.No416PartitionEqualSubsetSum](acm/src/leetCode/repository/No416PartitionEqualSubsetSum.java) |
 
 ### 并查集
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
@@ -62,6 +63,7 @@
 | 146 | LRU 缓存机制 | 中等 | 模拟/数据结构 | [leetCode.repository.No146LRUCache.java](acm/src/leetCode/repository/No146LRUCache.java)|
 | 297 | 二叉树的序列化与反序列化 | 困难 | 树的遍历的运用. |[leetCode.repository.No297SerializeAndDeserializeBinaryTree.java](acm/src/leetCode/repository/No297SerializeAndDeserializeBinaryTree.java)|
 | 315 | 计算右侧小于当前元素的个数 | 困难 | 树状数组 + 离散化,注意下数据有重复 | [leetCode.No315CountOfSmallerNumbersAfterSelf.java](acm/src/leetCode/repository/No315CountOfSmallerNumbersAfterSelf.java)|
+| leetcode 416  | 分割等和子集 | 中等 | 01背包题,由于"物品"没有"价值",所以结果值可以只用true false代表可达性 | [leetCode.repository.No416PartitionEqualSubsetSum](acm/src/leetCode/repository/No416PartitionEqualSubsetSum.java) |
 | 739 | 每日温度 | 中等 | 单调栈 或 贪心 |[leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java)|
 | 862 | 和至少为 K 的最短子数组 | 困难 | 找定义,找优化点,比较过程中更新比较集来实现优化 |[leetCode.repository.No862shortestSubarrayWithSumAtLeastK.java](acm/src/leetCode/repository/No862shortestSubarrayWithSumAtLeastK.java)|
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
