@@ -14,14 +14,18 @@ import java.util.List;
 public class No25ReverseNodesInKGroup {
 
     public static void main(String[] args) {
-        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 3).print();
-        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 1).print();
-        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1), 1).print();
-        new 自己想的递归模式().reverseKGroup(ListNode.packageList(1,2,3,4,5), 2).print();
+        //输出：[2,1,4,3,5]
+        new No25ReverseNodesInKGroup().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 2).print();
+        //输出：[3,2,1,4,5]
+        new No25ReverseNodesInKGroup().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 3).print();
+        //输出：[1,2,3,4,5]
+        new No25ReverseNodesInKGroup().reverseKGroup(ListNode.packageList(1, 2, 3, 4, 5), 1).print();
+        //输出：[1]
+        new No25ReverseNodesInKGroup().reverseKGroup(ListNode.packageList(1), 1).print();
     }
 
     public ListNode reverseKGroup(ListNode head, int k){
-        return new 自己想的递归模式().reverseKGroup(head, k);
+        return new 迭代模式进行翻转().reverseKGroup(head, k);
     }
 
     /**
@@ -32,7 +36,57 @@ public class No25ReverseNodesInKGroup {
     }
 
     /**
-     * 递归方式实现,个人感觉写的很不优雅("写的什么辣鸡玩意").
+     * 重做,不用递归实现. 然而结果并没有变优雅.
+     */
+    private static class 迭代模式进行翻转 implements ReverseKGroup{
+
+        @Override
+        public ListNode reverseKGroup(ListNode head, int k) {
+            if (k == 1) {
+                return head;
+            }
+            int count = 1;
+            ListNode resultBefore, beforeStart = new ListNode(-1, head), start = head, p = head, end, afterEnd;
+            resultBefore = beforeStart;
+            while (p.next != null) {
+                p = p.next;
+                count++;
+                if (count >= k) {
+                    end = p;
+                    afterEnd = p.next;
+                    //达到k个一组了,start成为新end,end成为新start
+                    reverse(start, end);
+                    ListNode t = start;
+                    start = end;
+                    end = t;
+                    //将翻转后的区间重新接入
+                    beforeStart.next = start;
+                    end.next = afterEnd;
+                    //重置beforeStart和start
+                    beforeStart = end;
+                    start = end.next;
+                    p = end;
+                    count = 0;
+                }
+            }
+            return resultBefore.next;
+        }
+
+        /**
+         * 翻转并返回新的头结点
+         */
+        public ListNode reverse(ListNode node, ListNode end) {
+            if (node == end) {
+                return node;
+            }
+            reverse(node.next, end).next = node;
+            return node;
+        }
+
+    }
+
+    /**
+     * 递归方式实现,个人感觉写的很不优雅(写的什么辣鸡玩意).
      */
     private static class 自己想的递归模式 implements ReverseKGroup {
 
