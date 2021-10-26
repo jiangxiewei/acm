@@ -3,6 +3,12 @@
 
 ## 题目分类
 
+### 数据结构
+
+| 题号 |    题名    | 难度 | 简介 |                类路径                  |
+| :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 103 | 二叉树的锯齿形层序遍历 | 中等(简单) | 基础的层序遍历题. |[leetCode.repository.No103二叉树的锯齿形层序遍历.java](acm/src/leetCode/repository/No103二叉树的锯齿形层序遍历.java)|
+
 ### 单调栈
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
@@ -19,6 +25,7 @@
 ### 动态规划
 | 题号 |    题名    | 难度 | 简介 |               类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| leetcode 5  | 最长回文子串 | 简单 | 找准状态转移逻辑 | [leetCode.repository.No5最长回文子串](acm/src/leetCode/repository/No5最长回文子串.java) |
 | leetcode 53  | 最大子序和 | 简单 | 还好 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
 | 面试题17.16 | 按摩师 | 简单 | 尝试从DFS->尾递归->DP的一个推断流程,注释里有 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
 | 面试题46 | 把数字翻译成字符串 | 简单 | 也可以用搜索 | [leetCode.repository.Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java](acm/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
@@ -52,6 +59,7 @@
 
 | 题号 |    题名    | 难度 | 简介 |                 类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| 5 | 最长回文子串 | 简单 | 找准状态转移逻辑 | [leetCode.repository.No5最长回文子串](acm/src/leetCode/repository/No5最长回文子串.java) |
 | 10 | 正则表达式匹配 | 困难(中等) | 依旧普通的递归搜索题 |[leetCode.repository.No10.java](acm/src/leetCode/repository/No10.java)|
 | 15 | 三数之和 | 中等 | 两数之和进阶版(本质一样) |[leetCode.repository.No15_3sum.java](acm/src/leetCode/repository/No15_3sum.java)|
 | 22 | 括号生成 | 中等(简单) | 一般的搜索题 |[leetCode.repository.No22GenerateParentheses.java](acm/src/leetCode/repository/No22GenerateParentheses.java)|
@@ -60,6 +68,7 @@
 | 53 | 只出现一次的数字 II | 中等(困难) | 普通做法很简单,[不使用额外空间实现](https://blog.csdn.net/jiangxiewei/article/details/82227451) 就略麻烦,可能需要逻辑代数知识 | [leetCode.repository.No137.java](acm/src/leetCode/repository/No137.java)|
 | 67 | 二进制求和 | 简单 | 高精度数API可解,题解也有位运算法解 | [leetCode.repository.No67AddBinary.java](acm/src/leetCode/repository/No67AddBinary.java)|
 | 84 | 柱状图中最大的矩形 | 困难 | 运用栈可以进一步优化. |[leetCode.repository.No84.java](acm/src/leetCode/repository/No84.java)|
+| 103 | 二叉树的锯齿形层序遍历 | 中等(简单) | 基础的层序遍历题. |[leetCode.repository.No103二叉树的锯齿形层序遍历.java](acm/src/leetCode/repository/No103二叉树的锯齿形层序遍历.java)|
 | 146 | LRU 缓存机制 | 中等 | 模拟/数据结构 | [leetCode.repository.No146LRUCache.java](acm/src/leetCode/repository/No146LRUCache.java)|
 | 297 | 二叉树的序列化与反序列化 | 困难 | 树的遍历的运用. |[leetCode.repository.No297SerializeAndDeserializeBinaryTree.java](acm/src/leetCode/repository/No297SerializeAndDeserializeBinaryTree.java)|
 | 315 | 计算右侧小于当前元素的个数 | 困难 | 树状数组 + 离散化,注意下数据有重复 | [leetCode.No315CountOfSmallerNumbersAfterSelf.java](acm/src/leetCode/repository/No315CountOfSmallerNumbersAfterSelf.java)|
