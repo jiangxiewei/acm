@@ -27,25 +27,30 @@ public class No3 {
     }
 
     public int windowSlide(String s) {
-        Map<Character, Integer> map = new HashMap<>();
-
+        //记录每个数字最后出现的位置
+        Map<Character, Integer> lastPos = new HashMap<>(s.length());
         int max = 0;
         for (int i = 0, j = 0; j < s.length(); j++) {
-            Integer next = map.get(s.charAt(j));
-//            System.out.println("next:" + next + "  i:" + i + "  j:" + j);
-            if (null == next) {
-            } else {
-                i = Math.max(next + 1, i);
+            Integer lastJ = lastPos.get(s.charAt(j));
+            if (null != lastJ) {
+                //如果j在之前出现过,则将左窗口向右快速移动至j之前出现过的位置之后.
+                // (注意:当然如果不是向右移动则不移动,即i可能>lastJ+1)
+                i = Math.max(lastJ + 1, i);
             }
             max = Math.max(max, j - i + 1);
-            map.put(s.charAt(j), j);
+            //记录每个字符最后一次出现的坐标
+            lastPos.put(s.charAt(j), j);
         }
         return max;
     }
 
     public static void main(String[] args) {
-
         System.out.println(new No3().lengthOfLongestSubstring("tmmzuxt"));
+        System.out.println(new No3().lengthOfLongestSubstring("abcabcbb"));//3
+        System.out.println(new No3().lengthOfLongestSubstring("bbbbb"));//1
+        System.out.println(new No3().lengthOfLongestSubstring("pwwkew"));//3
+        System.out.println(new No3().lengthOfLongestSubstring(" "));//1
+        System.out.println(new No3().lengthOfLongestSubstring("abba"));//2
     }
 
 }
