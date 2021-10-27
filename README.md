@@ -3,15 +3,16 @@
 
 ## 题目分类
 
-### 数据结构
+### 树
 
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | 103 | 二叉树的锯齿形层序遍历 | 中等(简单) | 基础的层序遍历题. |[leetCode.repository.No103二叉树的锯齿形层序遍历.java](acm/src/leetCode/repository/No103二叉树的锯齿形层序遍历.java)|
 
-### 单调栈
+### 栈
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
+| leetcode 32 | 最长有效括号 | 困难(中等) | 贪心/栈/动态规划 多种解法 |[leetCode.repository.No32最长有效括号.java](acm/src/leetCode/repository/No32最长有效括号.java)|
 | leetcode 739 | 每日温度 | 中等 | 单调栈 或 贪心 |[leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java)|
 | leetcode 1544 | 整理字符串 | 简单 | 1.模拟 2.栈 3.递归 | [leetCode.No1544MakeTheStringGreat.java](acm/src/leetCode/repository/No1544MakeTheStringGreat.java)|
 
@@ -64,6 +65,7 @@
 | 15 | 三数之和 | 中等 | 两数之和进阶版(本质一样) |[leetCode.repository.No15_3sum.java](acm/src/leetCode/repository/No15_3sum.java)|
 | 22 | 括号生成 | 中等(简单) | 一般的搜索题 |[leetCode.repository.No22GenerateParentheses.java](acm/src/leetCode/repository/No22GenerateParentheses.java)|
 | 25 | K 个一组翻转链表 | 困难(中等) | 模拟题 |[leetCode.repository.No25ReverseNodesInKGroup.java](acm/src/leetCode/repository/No25ReverseNodesInKGroup.java)|
+| 32 | 最长有效括号 | 困难(中等) | 贪心/栈/动态规划 多种解法 |[leetCode.repository.No32最长有效括号.java](acm/src/leetCode/repository/No32最长有效括号.java)|
 | 42 | 接雨水 | 困难 | 太久了,忘了内容了 |[leetCode.repository.No42TrappingRainWater.java](acm/src/leetCode/repository/No42TrappingRainWater.java)|
 | 53 | 只出现一次的数字 II | 中等(困难) | 普通做法很简单,[不使用额外空间实现](https://blog.csdn.net/jiangxiewei/article/details/82227451) 就略麻烦,可能需要逻辑代数知识 | [leetCode.repository.No137.java](acm/src/leetCode/repository/No137.java)|
 | 67 | 二进制求和 | 简单 | 高精度数API可解,题解也有位运算法解 | [leetCode.repository.No67AddBinary.java](acm/src/leetCode/repository/No67AddBinary.java)|
