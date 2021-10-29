@@ -28,9 +28,11 @@
 | :---: | :--------: | :---: | :---: | :-------------------------------------: |
 | leetcode 5  | 最长回文子串 | 简单 | 找准状态转移逻辑 | [leetCode.repository.No5最长回文子串](acm/src/leetCode/repository/No5最长回文子串.java) |
 | leetcode 53  | 最大子序和 | 简单 | 还好 | [leetCode.repository.No53MaximumSubarray](acm/src/leetCode/repository/No53MaximumSubarray.java) |
-| 面试题17.16 | 按摩师 | 简单 | 尝试从DFS->尾递归->DP的一个推断流程,注释里有 | [leetCode.repository.Mst_17_16_TheMasseuseLcci.java](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
-| 面试题46 | 把数字翻译成字符串 | 简单 | 也可以用搜索 | [leetCode.repository.Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java](acm/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
+| 面试题17.16 | 按摩师 | 简单 | 尝试从DFS->尾递归->DP的一个推断流程,注释里有 | [leetCode.repository.Mst_17_16_TheMasseuseLcci](acm/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java) |
+| 面试题46 | 把数字翻译成字符串 | 简单 | 也可以用搜索 | [leetCode.repository.Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof](acm/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
 | leetcode 416  | 分割等和子集 | 中等 | 01背包题,由于"物品"没有"价值",所以结果值可以只用true false代表可达性 | [leetCode.repository.No416PartitionEqualSubsetSum](acm/src/leetCode/repository/No416PartitionEqualSubsetSum.java) |
+| leetcode 1143  | 最长公共子序列 | 中等 | 二维动态规划 | [leetCode.repository.No1143最长公共子序列](acm/src/leetCode/repository/No1143最长公共子序列.java) |
+
 
 ### 并查集
 | 题号 |    题名    | 难度 | 简介 |                类路径                  |
@@ -80,6 +82,7 @@
 | 945 | 使数组唯一的最小增量 | 中等(简单) | 每日推荐里的水题 | [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java) |
 | 990 | 等式方程的可满足性 | 简单 | 模板题,可以测试自己写的模板 | [leetCode.No990SatisfiabilityOfEqualityEquations.java](acm/src/leetCode/repository/No990SatisfiabilityOfEqualityEquations.java)|
 | 1014 | 最佳观光组合 | 简单 | 贪心 | [leetCode.No1014BestSightseeingPair.java](acm/src/leetCode/repository/No1014BestSightseeingPair.java)|
+| 1143 | 最长公共子序列 | 中等 | 二维动态规划 | [leetCode.repository.No1143最长公共子序列](acm/src/leetCode/repository/No1143最长公共子序列.java) |
 | 1512 | 好数对的数目 | 简单 | 签到题 | [leetCode.No1512NumberOfGoodPairs.java](acm/src/leetCode/repository/No1512NumberOfGoodPairs.java)|
 | 1513 | 仅含 1 的子串数 | 中等 | 等差数列求和 | [leetCode.No1513NumberOfSubstringsWithOnly1s.java](acm/src/leetCode/repository/No1513NumberOfSubstringsWithOnly1s.java)|
 | 1514 | 概率最大的路径 | 中等 | Dijkstra | [leetCode.No1514PathWithMaximumProbability.java](acm/src/leetCode/repository/No1514PathWithMaximumProbability.java)|
