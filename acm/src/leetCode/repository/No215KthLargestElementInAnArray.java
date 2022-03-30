@@ -1,5 +1,6 @@
 package leetCode.repository;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Random;
 import java.util.function.BiFunction;
@@ -26,7 +27,7 @@ public class No215KthLargestElementInAnArray {
     }
 
     public int findKthLargest(int[] nums, int k) {
-        return new PriorityQueueSort().apply(nums, k);
+        return new MaxHeapSort().apply(nums, k);
     }
 
     /**
@@ -49,6 +50,58 @@ public class No215KthLargestElementInAnArray {
         }
 
     }
+
+    /**
+     * 大根堆实现,每次提取出大根,第k次提取就是需要的第k大的值
+     */
+    static class MaxHeapSort implements BiFunction<int[], Integer, Integer> {
+
+        int[] heap ;
+
+
+        @Override
+        public Integer apply(int[] ints, Integer k) {
+            this.heap = ints;
+            // 构建大根堆
+            for (int i = heap.length / 2; i >= 0; i--) {
+                maxHeapify(i);
+            }
+//            System.out.println(Arrays.toString(heap));
+            // 进行节点delete ,共k次
+            int lastPolled = 0;
+            for (int i = 0; i < k; i++) {
+                lastPolled = heap[0];
+                heap[0] = Integer.MIN_VALUE;
+                maxHeapify(0);
+            }
+            return lastPolled;
+        }
+
+        /**
+         * 递归调整大根堆节点
+         * @param pos 需要调整的节点id
+         */
+        void maxHeapify(int pos) {
+            int leftSon = pos * 2 + 1;
+            int rightSon = pos * 2 + 2;
+            if (leftSon < heap.length && heap[pos] < heap[leftSon]) {
+                swap(pos, leftSon);
+                maxHeapify(leftSon);
+            }
+            if (rightSon < heap.length && heap[pos] < heap[rightSon]) {
+                swap(pos, rightSon);
+                maxHeapify(rightSon);
+            }
+        }
+
+        void swap(int a, int b) {
+            heap[a] = heap[a] ^ heap[b];
+            heap[b] = heap[a] ^ heap[b];
+            heap[a] = heap[a] ^ heap[b];
+        }
+
+    }
+
 
     /**
      * 快排方式寻找第k个最大值.
