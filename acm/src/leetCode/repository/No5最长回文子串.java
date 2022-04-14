@@ -19,7 +19,44 @@ public class No5最长回文子串 {
     }
 
     public String longestPalindrome(String s) {
-        return new 动态规划法().apply(s);
+        return new 中心扩散法().apply(s);
+    }
+
+    public class 中心扩散法 implements Function<String, String> {
+
+        private int max = 0,maxl, maxr;
+
+        public String longestPalindrome(String s) {
+            if (s.length() == 1) {
+                return s;
+            }
+            char[] chars = s.toCharArray();
+            for (int i = 0; i < chars.length - 1; i++) {
+                expandAndGetMax(chars, i, i);
+                expandAndGetMax(chars, i, i + 1);
+            }
+            return max > 0 ? s.substring(maxl, maxr + 1) : "";
+        }
+
+        private void expandAndGetMax(char[] str, int l, int r) {
+            if (str[l] != str[r]) {
+                return ;
+            }
+            while (l >= 0 && r < str.length && str[l] == str[r]) {
+                l--;
+                r++;
+            }
+            if (r - l - 1 > max) {
+                max = r - l - 1;
+                maxl = l + 1;
+                maxr = r - 1;
+            }
+        }
+
+        @Override
+        public String apply(String s) {
+            return longestPalindrome(s);
+        }
     }
 
     public class 动态规划法 implements Function<String, String> {
