@@ -13,12 +13,13 @@
 
 ### 栈
 
-|      题号       |   题名   |    难度    |       简介       |                                                    类路径                                                     |
-|:-------------:|:------:| :----------: |:--------------:|:----------------------------------------------------------------------------------------------------------:|
-|  leetcode 32  | 最长有效括号 | 困难(中等) | 贪心/栈/动态规划 多种解法 |             [leetCode.repository.No32最长有效括号.java](acm/src/leetCode/repository/No32最长有效括号.java)             |
-| leetcode 445  | 两数相加II |   中等   |        栈       |                     [leetCode.repository.No445两数相加II](acm/src/leetCode/repository/No445两数相加II.java)        |
-| leetcode 739  |  每日温度  |    中等    |    单调栈 或 贪心    | [leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java) |
-| leetcode 1544 | 整理字符串  |    简单    | 1.模拟 2.栈 3.递归  |    [leetCode.No1544MakeTheStringGreat.java](acm/src/leetCode/repository/No1544MakeTheStringGreat.java)     |
+|      题号       |   题名  |   难度  |       简介        |                                                    类路径                                                     |
+|:-------------:|:-----:|:-----:|:---------------:|:----------------------------------------------------------------------------------------------------------:|
+|  leetcode 32  | 最长有效括号 | 困难(中等) | 贪心/栈/动态规划 多种解法  |             [leetCode.repository.No32最长有效括号.java](acm/src/leetCode/repository/No32最长有效括号.java)             |
+| leetcode 445  | 两数相加II |   中等  |        栈        |              [leetCode.repository.No445两数相加II](acm/src/leetCode/repository/No445两数相加II.java)               |
+| leetcode 739  |  每日温度 |   中等  |    单调栈 或 贪心     | [leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java) |
+| leetcode 856  | 括号的分数 |  中等   | 1.暴力 2.栈 3.数学思维 |                            [代码连接](acm/src/leetCode/repository/No856括号的分数.java)                             |
+| leetcode 1544 | 整理字符串 |   简单  |  1.模拟 2.栈 3.递归  |    [leetCode.No1544MakeTheStringGreat.java](acm/src/leetCode/repository/No1544MakeTheStringGreat.java)     |
 
 ### 搜索
 
@@ -111,6 +112,7 @@
 |   528    |        按权重随机选择        |   中等   |                                             随机算法方案?                                             |                                  [leetCode.repository.No528按权重随机选择](acm/src/leetCode/repository/No528按权重随机选择.java)                                  |
 |   543    |        二叉树的直径         |   中等   |                                 分治法,算出每个节点的左最大深度和右最大深度,比较并返回更大的                                 |                                  [leetCode.repository.No543二叉树的直径](acm/src/leetCode/repository/No543二叉树的直径.java)                                  |
 |   739    |         每日温度          |   中等   |                                            单调栈 或 贪心                                             |                    [leetCode.repository.No739DailyTemperatures.java](acm/src/leetCode/repository/No739DailyTemperatures.java)                     |
+|   856    |         括号的分数         |   中等   |                                        1.暴力 2.栈 3.数学思维                                          |                            [代码连接](acm/src/leetCode/repository/No856括号的分数.java)                             |
 |   862    |     和至少为 K 的最短子数组     |   困难   |                                    找定义,找优化点,比较过程中更新比较集来实现优化                                     |      [leetCode.repository.No862shortestSubarrayWithSumAtLeastK.java](acm/src/leetCode/repository/No862shortestSubarrayWithSumAtLeastK.java)       |
 |   912    |         排序数组          |   中等   |                                         基础排序实现,这里我用了归并.                                         |                          [leetCode.repository.No912SortAnArrya.java](acm/src/leetCode/repository/No912SortAnArrya.java)                           |
 |   945    |      使数组唯一的最小增量       | 中等(简单) |                                            每日推荐里的水题                                             |    [leetCode.repository.No945MinimumIncrementToMakeArrayUnique.java](acm/src/leetCode/repository/No945MinimumIncrementToMakeArrayUnique.java)     |
