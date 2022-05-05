@@ -127,8 +127,6 @@ public class No224基本计算器 {
                     tokenList.add(new Num(number));
                 } else if (input[i] == '(' && input[i + 1] == '-') {
                     //  如果左括号后面跟负号,则在负号前追加0抵消负数解析.  1-(-2) --> 1-(0-2)
-                    //  (此方法应对此题没问题,因为只有加减法,然而有更高优先级的算数符的时候就要考虑别的方案)
-                    //  失败样例: 1-(-2/2) --> 1-(0-2/2)
                     tokenList.add(new Ops(input[i]));
                     tokenList.add(new Num(0));
                 } else {
