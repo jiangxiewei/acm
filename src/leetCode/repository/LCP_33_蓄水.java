@@ -1,12 +1,12 @@
 package leetCode.repository;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.function.BiFunction;
 
 /**
- *
- *
- *
- * @see https://leetcode.cn/problems/o8SXZn/
+ * @see <a href="https://leetcode.cn/prob   lems/o8SXZn/"></a>
  */
 public class LCP_33_蓄水 {
 
@@ -38,17 +38,17 @@ public class LCP_33_蓄水 {
         System.out.println("result:" + result);
         assert result == 138;
 
-        result = new LCP_33_蓄水().storeWater(new int[]{63,85}, new int[]{85,96});
+        result = new LCP_33_蓄水().storeWater(new int[]{63, 85}, new int[]{85, 96});
         System.out.println("result:" + result);
         assert result == 2;
     }
 
     public int storeWater(int[] bucket, int[] vat) {
-        return new Force().apply(bucket, vat);
+        return new PriorityQueueSolution().apply(bucket, vat);
     }
 
     /**
-     * 暴力枚举所有蓄水次数
+     * 暴力枚举所有蓄水次数，对于每个缸，已知蓄水次数可以求得升级桶次数。
      */
     class Force implements BiFunction<int[], int[], Integer> {
 
@@ -56,7 +56,7 @@ public class LCP_33_蓄水 {
         public Integer apply(int[] bucket, int[] vat) {
             int maxStoreTime = 0;
             for (int i = 0; i < vat.length; i++) {
-                int storeTime = devideAndCeil(vat[i] , Math.max(bucket[i],1));
+                int storeTime = devideAndCeil(vat[i], Math.max(bucket[i], 1));
                 maxStoreTime = Math.max(maxStoreTime, storeTime);
             }
             // try to enumerate all the store action times
@@ -80,6 +80,87 @@ public class LCP_33_蓄水 {
         }
     }
 
+    /**
+     * 根据蓄水次数构造优先队列
+     * 蓄水次数最多的缸需要进行桶升级然后重新计算蓄水次数并更新最小所需蓄水次数，直到无法提升蓄水次数为止。
+     */
+    class PriorityQueueSolution implements BiFunction<int[], int[], Integer> {
+
+        @Override
+        public Integer apply(int[] bucket, int[] vat) {
+            Queue<Tupple> tuppleQueue = new PriorityQueue<>(vat.length, Comparator.comparingInt(Tupple::getCurrentStoreTime).reversed());
+
+            int maxStoreTime = 0, optCount = 0;
+            for (int i = 0; i < vat.length; i++) {
+                if (vat[i] > 0) {
+                    Tupple tupple = new Tupple(bucket[i], vat[i]);
+                    if (tupple.getUpdateTime() > 0) {
+                        optCount++;
+                    }
+                    maxStoreTime = Math.max(tupple.getCurrentStoreTime(), maxStoreTime);
+                    tuppleQueue.offer(tupple);
+                }
+            }
+
+            int result = maxStoreTime + optCount;
+            while (!tuppleQueue.isEmpty()) {
+                Tupple tupple = tuppleQueue.poll();
+                maxStoreTime = Math.min(tupple.getCurrentStoreTime(), maxStoreTime);
+                result = Math.min(maxStoreTime + optCount, result);
+                if (tupple.getCurrentStoreTime() > tupple.getStoreTimeIfAdd()) {
+                    tupple.addUpdateTime();
+                    optCount++;
+                    tuppleQueue.offer(tupple);
+                } else {
+                    tuppleQueue.offer(tupple);
+                    break;
+                }
+            }
+
+            return result;
+        }
+
+        class Tupple {
+            private final int initialBucket;
+            private int updateTime;
+            private final int vat;
+
+            public Tupple(int initialBucket, int vat) {
+                this.initialBucket = initialBucket;
+                this.vat = vat;
+                if (vat > 0 && initialBucket == 0) {
+                    updateTime = 1;
+                }
+            }
+
+            public int getUpdateTime() {
+                return updateTime;
+            }
+
+            public void addUpdateTime() {
+                this.updateTime++;
+            }
+
+            public int getStoreTimeIfAdd() {
+                return devideAndCeil(vat, initialBucket + updateTime + 1);
+            }
+
+            public int getCurrentStoreTime() {
+                return devideAndCeil(vat, initialBucket + updateTime);
+            }
+
+            @Override
+            public String toString() {
+                return "Tupple{" +
+                        "initialBucket=" + initialBucket +
+                        ", updateTime=" + updateTime +
+                        ", vat=" + vat +
+                        '}';
+            }
+        }
+
+
+    }
 
     private int devideAndCeil(int a, int b) {
         return a / b + (a % b > 0 ? 1 : 0);

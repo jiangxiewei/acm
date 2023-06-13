@@ -7,6 +7,8 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.function.Function;
 
 /**
+ * 未完待续
+ * 还没AC
  * @author jiang
  * @date 2023/5/8
  */
@@ -60,7 +62,7 @@ public class No1263推箱子 {
                 if (grid[pos.x][pos.y] == 'T') {
                     return pos.step;
                 }
-                var posCanGo = findPosCanGo(pos);
+                List<Pos> posCanGo = findPosCanGo(pos);
                 for (Pos canGo : posCanGo) {
                     bfsQue.offer(canGo);
                 }
