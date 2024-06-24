@@ -13,13 +13,14 @@
 
 ### 栈
 
-|      题号       |   题名   |   难度   |       简介        |                                 题解                                 |
-|:-------------:|:------:|:------:|:---------------:|:------------------------------------------------------------------:|
-|  leetcode 32  | 最长有效括号 | 困难(中等) | 贪心/栈/动态规划 多种解法  |        [java](java/src/leetCode/repository/No32最长有效括号.java)        |
-| leetcode 445  | 两数相加II |   中等   |        栈        |       [java](java/src/leetCode/repository/No445两数相加II.java)        |
-| leetcode 739  |  每日温度  |   中等   |    单调栈 或 贪心     |  [java](java/src/leetCode/repository/No739DailyTemperatures.java)  |
-| leetcode 856  | 括号的分数  |   中等   | 1.暴力 2.栈 3.数学思维 |        [java](java/src/leetCode/repository/No856括号的分数.java)        |
-| leetcode 1544 | 整理字符串  |   简单   |  1.模拟 2.栈 3.递归  | [java](java/src/leetCode/repository/No1544MakeTheStringGreat.java) |
+|       题号       |   题名   |   难度   |       简介        |                                 题解                                 |
+|:--------------:|:------:|:------:|:---------------:|:------------------------------------------------------------------:|
+|  leetcode 32   | 最长有效括号 | 困难(中等) | 贪心/栈/动态规划 多种解法  |        [java](java/src/leetCode/repository/No32最长有效括号.java)        |
+|  leetcode 445  | 两数相加II |   中等   |        栈        |       [java](java/src/leetCode/repository/No445两数相加II.java)        |
+|  leetcode 503  |      下一个更大元素 II       |    中等     |                                               单调栈                                               |                              [rust](rust/src/leetcode/no_503.rs)                               |
+|  leetcode 739  |  每日温度  |   中等   |    单调栈 或 贪心     |  [java](java/src/leetCode/repository/No739DailyTemperatures.java)  |
+|  leetcode 856  | 括号的分数  |   中等   | 1.暴力 2.栈 3.数学思维 |        [java](java/src/leetCode/repository/No856括号的分数.java)        |
+|  leetcode 1544 | 整理字符串  |   简单   |  1.模拟 2.栈 3.递归  | [java](java/src/leetCode/repository/No1544MakeTheStringGreat.java) |
 
 ### 搜索
 
@@ -36,7 +37,7 @@
 
 |      题号       |    题名     |   难度   |                     简介                      |                                            题解                                            |
 |:-------------:|:---------:|:------:|:-------------------------------------------:|:----------------------------------------------------------------------------------------:|
-|  leetcode 5   |  最长回文子串   |   简单   |                  找准状态转移逻辑                   |                   [java](java/src/leetCode/repository/No5最长回文子串.java)                    |
+|  leetcode 5   |  最长回文子串   |   简单   |                  找准状态转移逻辑                   |                   [java](java/src/leetCode/repository/No5最长回文子串.java)  [rust](rust/src/leetcode/no_5.rs)                  |
 |  leetcode 53  |   最大子序和   | 简单(中等) |               dp思路或者可以用数学推导求                |                   [java](java/src/leetCode/repository/No53最大子数组和.java)                   |
 |   面试题17.16    |    按摩师    |   简单   |         尝试从DFS->尾递归->DP的一个推断流程,注释里有         |           [java](java/src/leetCode/repository/Mst_17_16_TheMasseuseLcci.java)            |
 |     面试题46     | 把数字翻译成字符串 |   简单   |                   也可以用搜索                    | [java](java/src/leetCode/repository/Mst_46_ba_shu_zi_fan_yi_cheng_zi_fu_chuan_lcof.java) |
