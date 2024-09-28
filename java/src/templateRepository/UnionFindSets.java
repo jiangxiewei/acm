@@ -14,8 +14,7 @@ public class UnionFindSets {
     /**
      * 并查集实例
      */
-    private int[] sets;
-    private int size;
+    private final int[] sets;
 
     /**
      * 初始化并查集
@@ -24,9 +23,7 @@ public class UnionFindSets {
      */
     public UnionFindSets(int size) {
         sets = new int[size];
-        this.size = size;
         Arrays.setAll(sets, operand -> operand);
-//        System.out.println(Arrays.toString(sets));
     }
 
     /**
@@ -77,14 +74,14 @@ public class UnionFindSets {
     /**
      * 对所有元素执行一次find(x)操作,让素有元素都指向其集合的根节点
      */
-    public void findAll() {
+    public void redirectAll() {
         for (int i = 0; i < sets.length; i++) {
             find(i);
         }
     }
 
     public int getSize() {
-        return size;
+        return sets.length;
     }
 
     @Override
