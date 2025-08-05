@@ -15,6 +15,7 @@ impl Solution {
         **动态规划法**
         dp\[i\]\[j\] = dp\[i+1\]\[j-1\] && s\[i\] == s\[j\]
      */
+    #[allow(dead_code)]
     fn dynamic_programing(str: String) -> String {
         let arr = str.as_bytes();
         let arr_len: usize = arr.len();
